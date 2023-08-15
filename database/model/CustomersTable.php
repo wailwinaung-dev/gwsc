@@ -55,7 +55,7 @@ class CustomersTable
             $sql = "SELECT * FROM customers WHERE email = '" . $email . "' AND password = '" . $password . "'";
             $result = $this->db->query($sql);
             
-            return $result->fetch_row();
+            return $result->fetch_assoc();
         } catch (Exception $e) {
             throw new Exception($e->getMessage());
         }
