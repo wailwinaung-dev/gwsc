@@ -1,12 +1,12 @@
 <?php
-include("../MySql.php");
+include(__DIR__ . "/../MySql.php");
 
-class CustomersTable
+class CustomersTable extends MySQL
 {
     private $db = null;
-    public function __construct(MySQL $db)
+    public function __construct()
     {
-        $this->db = $db->connect();
+        $this->db = $this->connect();
     }
 
     public function getAll()
@@ -61,15 +61,17 @@ class CustomersTable
         }
         
     }
-}
 
-// $table = new UsersTable(new MySQL());
-// $result = $table->getAll();
-// if ($result->num_rows > 0) {
-//     // output data of each row
-//     while($row = $result->fetch_assoc()) {
-//       echo "id: " . $row["id"]. " - Name: " . $row["first_name"]. " " . $row["sur_name"]. "<br>";
-//     }
-// } else {
-//     echo "0 results";
-// }
+    public function findByEmail($email)
+    {
+        try {
+            $sql = "SELECT COUNT(email) FROM customers WHERE email = '" . $email . "'";
+            $result = $this->db->query($sql);
+            
+            return $result->fetch_column();
+        } catch (Exception $e) {
+            throw new Exception($e->getMessage());
+        }
+        
+    }
+}

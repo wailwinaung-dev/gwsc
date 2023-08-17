@@ -10,8 +10,8 @@ class Auth
     {
         session_start();
 
-        if(isset($_SESSION['user'])) {
-            return $_SESSION['user'];
+        if(isset($_SESSION['customer'])) {
+            return $_SESSION['customer'];
         } else {
             HTTP::redirect(static::$loginUrl);
         }

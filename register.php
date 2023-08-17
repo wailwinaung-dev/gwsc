@@ -1,3 +1,7 @@
+<?php
+    session_start();
+    include("./helpers/FLUSH.php");
+?>
 <!DOCTYPE html>
 <html>
 
@@ -20,6 +24,11 @@
         <?php if (isset($_GET['error'])) : ?>
             <div class="alert alert-warning">
                 Cannot create account. Please try again.
+            </div>
+        <?php endif ?>
+        <?php if (FLUSH::check('error')) : ?>
+            <div class="alert alert-warning">
+                <?php echo FLUSH::message('error'); ?>
             </div>
         <?php endif ?>
         <form action="actions/create_customer.php" method="post">

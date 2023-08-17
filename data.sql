@@ -19,6 +19,7 @@ create table admins(
 	password varchar(255) not null,
 	phone varchar(30) NOT NULL,
 	address text not null,
+	position varchar(100) not null,
 	created_at datetime not null,
 	updated_at datetime not null
 );
