@@ -10,7 +10,7 @@ $table = new CustomersTable();
 $customer = $table->findByEmailAndPasword($email, $password);
 
 if ($customer) {
-    $_SESSION['customer'] = $customer;
+    $_SESSION['user'] = $customer;
     HTTP::redirect("/home.php");
 } else {
     HTTP::redirect("/login.php", "incorrect=1");
