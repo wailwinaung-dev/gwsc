@@ -1,33 +1,46 @@
 <?php
-// include("../MySql.php");
+include(__DIR__."/../MySql.php");
 
-// class UsersTable
-// {
-//     private $db = null;
-//     public function __construct()
-//     {
-//         $this->db = $db->connect();
-//     }
+class AdminsTable extends MySQL
+{
+    private $db = null;
+    public function __construct()
+    {
+        $this->db = $this->connect();
+    }
 
-//     public function getAll()
-//     {
-//         try {
-//             $query = "SELECT * FROM admins";
-//             return $this->db->query($query);;
-//         } catch (Exception $e) {
-//             throw new Exception($e->getMessage());
-//         }
-//     }
+    public function getAll()
+    {
+        try {
+            $query = "SELECT * FROM admins";
+            return $this->db->query($query);;
+        } catch (Exception $e) {
+            throw new Exception($e->getMessage());
+        }
+    }
+    
+    public function findUserByEmailAndPassword(string $email, string $password)
+    {
+        try{
+            $query="SELECT * FROM admins ";
+            $query.=" WHERE email=? and password = ? LIMIT 1;";
 
-// }
+            $stmt=$this->db->prepare($query);
 
-// $table = new UsersTable();
-// $result = $table->getAll();
-// if ($result->num_rows > 0) {
-//     // output data of each row
-//     while($row = $result->fetch_assoc()) {
-//       echo "id: " . $row["id"]. " - Name: " . $row["first_name"]. " " . $row["sur_name"]. "<br>";
-//     }
-// } else {
-//     echo "0 results";
-// }
+            $stmt->bind_param("ss",$email,$password);
+
+            $stmt->execute();
+
+            $rs=$stmt->get_result();
+            
+            $result=$rs->fetch_assoc();
+
+            $result['is_admin']=true;
+
+            return $result;
+        }catch(Exception $e){
+
+        }
+    }
+
+}
