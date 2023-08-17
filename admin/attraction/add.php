@@ -1,3 +1,10 @@
+<?php
+session_start();
+include("../../helpers/AUTH.php");
+
+Auth::check();
+
+?>
 <!DOCTYPE html>
 <html>
 
