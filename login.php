@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    include("./helpers/FLUSH.php");
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -17,16 +22,11 @@
 <body class="text-center">
     <div class="wrap">
         <h1 class="h3 mb-3">Login</h1>
-        <?php if (isset($_GET['incorrect'])) : ?>
+        <?php if(FLUSH::check('error')): ?>
             <div class="alert alert-warning">
-                Incorrect Email or Password
+                <?= FLUSH::message('error') ?>
             </div>
-        <?php endif ?>
-        <?php if (isset($_GET['registered'])) : ?>
-            <div class="alert alert-success">
-                Account created. Please login.
-            </div>
-        <?php endif ?>
+        <?php endif; ?>
         <form action="actions/login.php" method="post">
             <input type="email" name="email" class="form-control mb-2" placeholder="Email" required>
             <input type="password" name="password" class="form-control mb-2" placeholder="Password" required>

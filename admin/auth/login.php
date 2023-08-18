@@ -1,3 +1,7 @@
+<?php
+    session_start();
+    include("../../helpers/FLUSH.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +11,12 @@
     <title>Admin Login</title>
 </head>
 <body class="" style="height:100svh;">
-    <form class=" m-auto position-absolute top-0 bottom-0 w-50" style="left: 0;right: 0;top:0;bottom:0; height: 200px;" action="/actions/admin/auth/Login.php" method='post'>
+    <form class=" m-auto position-absolute top-0 bottom-0 w-50" style="left: 0;right: 0;top:0;bottom:0; height: 200px;" action="../../actions/admin/auth/Login.php" method='post'>
+        <?php if(FLUSH::check('error')): ?>
+            <div class="alert alert-warning">
+                <?= FLUSH::message('error') ?>
+            </div>
+        <?php endif; ?>
         <div class="mb-1 text-center h3">
             Login   
         </div>

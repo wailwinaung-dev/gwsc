@@ -56,7 +56,7 @@ class CustomersTable extends MySQL
             $result = $this->db->query($sql);
             
             $data= $result->fetch_assoc();
-            $data['is_admin']=false;
+
             return $data;
         } catch (Exception $e) {
             throw new Exception($e->getMessage());

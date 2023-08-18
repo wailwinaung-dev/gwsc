@@ -35,8 +35,6 @@ class AdminsTable extends MySQL
             
             $result=$rs->fetch_assoc();
 
-            $result['is_admin']=true;
-
             return $result;
         }catch(Exception $e){
 
