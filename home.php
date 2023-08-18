@@ -2,7 +2,7 @@
     include("./helpers/AUTH.php");
 
     $auth = Auth::check();
-    var_dump($_SESSION['user']);
+    var_dump($auth);
 ?>
 
 <h1>This is HomePage.</h1>

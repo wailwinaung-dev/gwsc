@@ -11,8 +11,7 @@ $table = new CustomersTable();
 $customer = $table->findByEmailAndPasword($email, $password);
 
 if ($customer) {
-    $customer['is_admin'] = false;
-    $_SESSION['user'] = $customer;
+    $_SESSION['customer'] = $customer;
     HTTP::redirect("/home.php");
 } else {
     FLUSH::message('error', 'Email or Password is incorrect.');

@@ -15,8 +15,7 @@
 
     if ($admin) {
 
-        $admin['is_admin'] = true;
-        $_SESSION['user'] = $admin;
+        $_SESSION['admin'] = $admin;
 
         HTTP::redirect("/admin/dashboard.php");
     } else {

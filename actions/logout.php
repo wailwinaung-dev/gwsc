@@ -1,17 +1,13 @@
 <?php
-session_start();
 
-include("../helpers/HTTP.php");
+include("../helpers/AUTH.php");
 
-$is_admin = $_SESSION['user']['is_admin'];
+$auth = Auth::check();
 
-if(isset($_SESSION['user'])){
-    $_SESSION['user'] = NULL;
+if(isset($_SESSION['customer'])){
+    $_SESSION['customer'] = NULL;
 }
 
-if($is_admin){
-    HTTP::redirect("/admin/auth/login.php");
-}else{
-    HTTP::redirect("/login.php");
-}
+HTTP::redirect("/login.php");
+
 
