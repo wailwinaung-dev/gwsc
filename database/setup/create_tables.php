@@ -111,6 +111,7 @@ $query = "CREATE TABLE packages (
     campsite_id int(11) NOT NULL,
     name varchar(200) NOT NULL,
     description text not null,
+    price int(11) NOT NULL,
     image varchar(255) NOT NULL,
     location varchar(255) NOT NULL,
     status tinyint NOT NULL DEFAULT 0,

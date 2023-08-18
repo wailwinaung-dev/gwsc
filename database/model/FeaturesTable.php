@@ -1,9 +1,9 @@
 <?php
-include( __DIR__ . '/../MySql.php');
+include_once( __DIR__ . '/../MySql.php');
 
 
 
-class FeaturesTable extends MySQL
+Class FeaturesTable extends MySQL
 {
     private $db = null;
     public function __construct()
