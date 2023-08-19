@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 include('../../helpers/FLUSH.php');
 include('../../database/model/PitchTypesTable.php');
 
@@ -8,46 +8,43 @@ $pitchTypes = $pitchTypeTable->getAll();
 
 ?>
 
-<!DOCTYPE html>
-<html>
+<?php 
+    include("../../layout/admin/header.php");
+    include("../../layout/admin/navbar.php");
+    include("../../layout/admin/sidebar.php") 
+?>
 
-<head>
-    <title>Home</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<div class="d-flex justify-content-between align-items-center mb-2">
+    <h1 class="h3">Pitch Types</h1>
 
-</head>
+    <a href="add.php" class="btn btn-success">+ New Pitch Types</a>
+</div>
+<?php if (FLUSH::check('success')) : ?>
+<div class="alert alert-success">
+    <?= FLUSH::message('success') ?>
+</div>
+<?php endif ?>
 
-<body class="text-center">
-    <div class="wrap">
-        <h1 class="h3 mb-3">Pitch Types</h1>
-        <?php if (FLUSH::check('success')) : ?>
-            <div class="alert alert-success">
-                <?= FLUSH::message('success') ?>
-            </div>
-        <?php endif ?>
 
-        <div class="container">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">created</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php foreach ($pitchTypes as $key => $pitchTypes) : ?>
-                        <tr>
-                            <th scope="row"><?= $key +1 ?></th>
-                            <td><?= $pitchTypes['name'] ?></td>
-                            <td><?= $pitchTypes['created_at'] ?></td>
-                        </tr>
-                    <?php endforeach; ?>
-                </tbody>
-            </table>
-        </div>
-    </div>
-</body>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">created</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach ($pitchTypes as $key => $pitchTypes) : ?>
+            <tr>
+                <th scope="row"><?= $key +1 ?></th>
+                <td><?= $pitchTypes['name'] ?></td>
+                <td><?= $pitchTypes['created_at'] ?></td>
+            </tr>
+        <?php endforeach; ?>
+    </tbody>
+</table>
 
-</html>``
+<?php 
+    include("../../layout/admin/footer.php");
+?>
