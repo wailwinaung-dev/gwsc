@@ -1,6 +1,6 @@
 
 <!-- Sidebar navigation menu -->
-<div class="col-md-3 mt-3">
+<div class="col-md-2 mt-3">
     <div class="list-group">
         <a href="/gwsc/admin/dashboard.php" class="list-group-item list-group-item-action">Dashboard</a>
         <a href="#" class="list-group-item list-group-item-action">Users (not finished)</a>
@@ -14,4 +14,4 @@
 </div>
 
 <!-- Content -->
-<div class="col-md-9 mt-3">
+<div class="col-md-10 mt-3">

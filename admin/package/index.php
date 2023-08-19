@@ -36,9 +36,10 @@ $packages = $packagesTable->getAll();
             <th scope="col">Description</th>
             <th scope="col">Price</th>
             <th scope="col">Image</th>
-            <th scope="col">Location</th>
             <th scope="col">Pitch Type</th>
             <th scope="col">Campsite</th>
+            <th scope="col">Status</th>
+            <th scope="col">Action</th>
         </tr>
     </thead>
     <tbody>
@@ -49,16 +50,16 @@ $packages = $packagesTable->getAll();
                 <td><?= $package['description'] ?></td>
                 <td><?= $package['price'] ?></td>
                 <td><?= $package['image'] ?></td>
-                <td><?= $package['location'] ?></td>
                 <td><?= $package['pitch_type_name'] ?></td>
                 <td><?= $package['campsite_name'] ?></td>
+                <td><?= $package['status'] ? 'Enabled' : 'Disabled' ?></td>
+                <td>
+                <a href="view.php?id=<?= $package['id'] ?>" class="text-primary">View</a> | <a href="#" class="text-warning">Edit</a> | <a href="#" class="text-danger">Delete</a>
+                </td>
             </tr>
         <?php endforeach; ?>
     </tbody>
 </table>
-    </div>
-</body>
-
 <?php 
     include("../../layout/admin/footer.php");
 ?>

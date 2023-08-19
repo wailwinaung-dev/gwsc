@@ -95,8 +95,27 @@ Class PackagesTable extends MySQL
     public function findById($id)
     {
         try {
-            $sql = "SELECT * FROM features WHERE id = '" . $id . "'";
-            $result = $this->db->query($sql);
+            $query = "SELECT 
+                packages.*, 
+                pitch_types.name AS pitch_type_name,
+                campsites.name AS campsite_name,
+                concat('[', GROUP_CONCAT(DISTINCT JSON_OBJECT('id',features.id, 'name', features.name, 'description', features.description) ORDER BY features.id separator ','), ']') as features,
+
+                concat('[', GROUP_CONCAT(DISTINCT JSON_OBJECT('id',attractions.id, 'name', attractions.name, 'description', attractions.description) ORDER BY attractions.id separator ','), ']') as attractions
+            FROM packages
+                JOIN package_feature ON packages.id = package_feature.package_id
+                JOIN features ON features.id = package_feature.feature_id
+
+                JOIN package_attraction ON packages.id = package_attraction.package_id
+                JOIN attractions ON attractions.id = package_attraction.attraction_id
+
+                JOIN pitch_types ON packages.pitch_type_id = pitch_types.id
+
+                JOIN campsites ON packages.campsite_id = campsites.id
+            WHERE packages.id = " . $id . "
+            GROUP BY packages.name";
+
+            $result = $this->db->query($query);
             
             return $result->fetch_assoc();
         } catch (Exception $e) {

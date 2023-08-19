@@ -53,8 +53,8 @@ if($result){
  ***/
 $query = "CREATE TABLE campsites(
     id int(11) PRIMARY KEY auto_increment,
-    name varchar(100),
-    location varchar(255),
+    name varchar(100) not null,
+    location text not null,
     created_at datetime not null,
     updated_at datetime not null
 )";
@@ -113,7 +113,7 @@ $query = "CREATE TABLE packages (
     description text not null,
     price int(11) NOT NULL,
     image varchar(255) NOT NULL,
-    location varchar(255) NOT NULL,
+    location text NOT NULL,
     status tinyint NOT NULL DEFAULT 0,
     updated_at datetime NOT NULL,	
     created_at datetime NOT NULL,
@@ -178,7 +178,7 @@ $query = "CREATE TABLE attractions(
     id int(11) PRIMARY KEY auto_increment,
     name varchar(100) NOT NULL,
     description text not null,
-    location varchar(150) NOT NULL,
+    location text NOT NULL,
     image varchar(255) not null
 )";
 $result = $sql->connect()->query($query);
