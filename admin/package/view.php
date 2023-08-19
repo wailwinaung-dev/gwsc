@@ -85,7 +85,13 @@ iframe {
         </p>
 
         <div>
-            <a href="" class="btn btn-secondary"><?= $package['status'] ? 'Disabled' : 'Enabled' ?></a>
+            <a 
+                href="/gwsc/actions/admin/package/toggle_status.php?id=<?= $package['id'] ?>" 
+                class="btn btn-secondary" 
+                onclick="return confirm('Are you sure to enable <?= $package['name'] ?>?');"
+            >
+                <?= $package['status'] ? 'Disabled' : 'Enabled' ?>
+            </a>
             <a href="" class="btn btn-warning">Edit</a>
             <a href="" class="btn btn-danger">Delete</a>
         </div>

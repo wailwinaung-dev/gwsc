@@ -123,4 +123,20 @@ Class PackagesTable extends MySQL
         }
         
     }
+
+    public function toggleStatus($id){
+
+        try {
+            $result = $this->db->query("SELECT status FROM packages WHERE id='" . $id . "'");
+            $status = $result->fetch_column();
+            
+            $this->db->query("UPDATE packages SET status='" . !$status . "' WHERE id='" . $id . "'"); 
+            
+            return !$status; 
+        } catch (Exception $e) {
+            throw new Exception($e->getMessage());
+        }
+        
+        
+    }
 }
