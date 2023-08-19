@@ -12,7 +12,6 @@ $package = new PackagesTable();
 $name = $_FILES['image']['name'];
 $error = $_FILES['image']['error'];
 $tmp = $_FILES['image']['tmp_name'];
-$type = $_FILES['image']['type'];
 $imageFileType = strtolower(pathinfo($name,PATHINFO_EXTENSION));
 
 if ($error) {
@@ -20,7 +19,7 @@ if ($error) {
     HTTP::redirect("/admin/package/add.php");
 }
 
-if ($type === "image/jpeg" or $type === "image/png") {
+if ($imageFileType === "jpeg" or $imageFileType === 'jpg' or $imageFileType === "png") {
 
     $file_name = uniqid() . '.' .  $imageFileType;
     move_uploaded_file($tmp, "../../photos/packages/" . $file_name);

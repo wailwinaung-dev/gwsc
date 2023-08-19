@@ -6,9 +6,9 @@ include('../../database/model/PackagesTable.php');
 $packagesTable = new PackagesTable();
 $packages = $packagesTable->getAll();
 
-echo "<pre>";
-var_dump($packages);
-echo "</pre>";
+// echo "<pre>";
+// var_dump($packages);
+// echo "</pre>";
 
 ?>
 
@@ -37,16 +37,24 @@ echo "</pre>";
                         <th scope="col">#</th>
                         <th scope="col">Name</th>
                         <th scope="col">Description</th>
+                        <th scope="col">Price</th>
                         <th scope="col">Image</th>
+                        <th scope="col">Location</th>
+                        <th scope="col">Pitch Type</th>
+                        <th scope="col">Campsite</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($features as $key => $feature) : ?>
+                    <?php foreach ($packages as $key => $package) : ?>
                         <tr>
                             <th scope="row"><?= $key +1 ?></th>
-                            <td><?= $feature['name'] ?></td>
-                            <td><?= $feature['description'] ?></td>
-                            <td><?= $feature['image'] ?></td>
+                            <td><?= $package['name'] ?></td>
+                            <td><?= $package['description'] ?></td>
+                            <td><?= $package['price'] ?></td>
+                            <td><?= $package['image'] ?></td>
+                            <td><?= $package['location'] ?></td>
+                            <td><?= $package['pitch_type_name'] ?></td>
+                            <td><?= $package['campsite_name'] ?></td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>

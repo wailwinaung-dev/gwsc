@@ -17,20 +17,26 @@ Class PackagesTable extends MySQL
         try {
             $query = "SELECT 
                 packages.*, 
-                concat('[', group_concat(JSON_OBJECT('id',features.id, 'name', features.name, 'description', features.description) order by features.id separator ','), ']') as features,
+                pitch_types.name AS pitch_type_name,
+                campsites.name AS campsite_name,
+                concat('[', GROUP_CONCAT(DISTINCT JSON_OBJECT('id',features.id, 'name', features.name, 'description', features.description) ORDER BY features.id separator ','), ']') as features,
 
-                concat('[', group_concat(JSON_OBJECT('id',attractions.id, 'name', attractions.name, 'description', attractions.description) order by attractions.id separator ','), ']') as attractions
+                concat('[', GROUP_CONCAT(DISTINCT JSON_OBJECT('id',attractions.id, 'name', attractions.name, 'description', attractions.description) ORDER BY attractions.id separator ','), ']') as attractions
             FROM packages
                 JOIN package_feature ON packages.id = package_feature.package_id
                 JOIN features ON features.id = package_feature.feature_id
 
                 JOIN package_attraction ON packages.id = package_attraction.package_id
                 JOIN attractions ON attractions.id = package_attraction.attraction_id
+
+                JOIN pitch_types ON packages.pitch_type_id = pitch_types.id
+
+                JOIN campsites ON packages.campsite_id = campsites.id
             GROUP BY packages.name";
 
             $result = $this->db->query($query);
             $data = $result->fetch_all(MYSQLI_ASSOC);
-            $data[0]['features'] = json_decode($data[0]['features']);
+            
             return $data;
         } catch (Exception $e) {
             throw new Exception($e->getMessage());

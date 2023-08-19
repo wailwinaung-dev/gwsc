@@ -1,4 +1,7 @@
 <?php
+
+session_start();
+include(__DIR__ . "/../../helpers/FLUSH.php");
 include(__DIR__ . "/../../database/model/PitchTypesTable.php");
 include(__DIR__ . "/../../database/model/CampsitesTable.php");
 include(__DIR__ . "/../../database/model/AttractionsTable.php");
@@ -37,11 +40,11 @@ $attractions = $attractionsTable->getAll();
 <body>
     <div class="wrap text-center">
         <h1 class="h3 mb-3">Add New Package</h1>
-        <?php if (isset($_GET['incorrect'])) : ?>
+        <?php if(FLUSH::check('error')): ?>
             <div class="alert alert-warning">
-                Incorrect Email or Password
+                <?= FLUSH::message('error') ?>
             </div>
-        <?php endif ?>
+        <?php endif; ?>
         <form action="../../actions/admin/package/create.php" method="post" enctype="multipart/form-data">
 
             <input type="type" name="name" class="form-control mb-2" placeholder="Enter Name" required>
