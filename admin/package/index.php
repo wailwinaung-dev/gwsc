@@ -54,7 +54,9 @@ $packages = $packagesTable->getAll();
                 <td><?= $package['campsite_name'] ?></td>
                 <td><?= $package['status'] ? 'Enabled' : 'Disabled' ?></td>
                 <td>
-                <a href="view.php?id=<?= $package['id'] ?>" class="text-primary">View</a> | <a href="#" class="text-warning">Edit</a> | <a href="#" class="text-danger">Delete</a>
+                <a href="view.php?id=<?= $package['id'] ?>" class="text-primary">View</a> | 
+                <a href="edit.php?id=<?= $package['id'] ?>" class="text-warning">Edit</a> | 
+                <a href="#" class="text-danger">Delete</a>
                 </td>
             </tr>
         <?php endforeach; ?>

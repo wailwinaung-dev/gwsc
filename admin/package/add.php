@@ -41,8 +41,8 @@ $attractions = $attractionsTable->getAll();
         <input type="number" name="price" class="form-control mb-2" placeholder="Enter Price" min="0" required>
 
         <input type="file" class="form-control-file mb-2" name="image" accept="image/*">
-
-        <input type="type" name="location" class="form-control mb-2" placeholder="Enter Location" required>
+        
+        <textarea class="form-control mb-2" name="location" rows="3" placeholder="Enter Location" required></textarea>
 
         <select class="form-control mb-2" name="pitch_type_id">
             <?php foreach ($pitchtypes as $pitchtype): ?>
