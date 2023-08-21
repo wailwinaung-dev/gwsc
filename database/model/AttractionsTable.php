@@ -49,11 +49,47 @@ class AttractionsTable extends MySQL
         }
     }
 
+    public function update($data){
+        $sql = "UPDATE attractions
+            SET name = ?, description = ?, image = ?, location = ?
+            WHERE id = ?";
+
+        // Prepare and execute the query
+        $stmt = $this->db->prepare($sql);
+        $stmt->bind_param(
+            "ssssi",
+            $data['name'],
+            $data['description'],
+            $data['image'],
+            $data['location'],
+            $data['id']
+        );
+
+        $stmt->execute();
+    }
+
+    public function delete($id){
+        // Delete from package_attraction table
+        $stmt = $this->db->prepare("DELETE FROM attractions WHERE id = ?");
+        $stmt->bind_param("i", $id);
+        $stmt->execute();
+        $stmt->close();
+    }
+
     public function findById($id)
     {
         try {
-            $sql = "SELECT * FROM attractions WHERE id = '" . $id . "'";
-            $result = $this->db->query($sql);
+            $sql = "SELECT a.*, COUNT(p.name) AS package_count
+            FROM attractions a
+            LEFT JOIN package_attraction pa ON pa.attraction_id = a.id 
+            LEFT JOIN packages p ON p.id = pa.package_id
+            WHERE a.id = ?
+            GROUP BY a.id
+            ";
+           $stmt = $this->db->prepare($sql);
+           $stmt->bind_param("i", $id);
+           $stmt->execute();
+           $result = $stmt->get_result();
             
             return $result->fetch_assoc();
         } catch (Exception $e) {
