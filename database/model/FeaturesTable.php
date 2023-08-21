@@ -14,7 +14,7 @@ Class FeaturesTable extends MySQL
     public function getAll()
     {   
         try {
-            $query = "SELECT * FROM features";
+            $query = "SELECT * FROM features ORDER BY id DESC";
             $result = $this->db->query($query);
             return $result->fetch_all(MYSQLI_ASSOC);
         } catch (Exception $e) {
@@ -48,11 +48,46 @@ Class FeaturesTable extends MySQL
         }
     }
 
+    public function update($data){
+        $sql = "UPDATE features
+            SET name = ?, description = ?, image = ?
+            WHERE id = ?";
+
+        // Prepare and execute the query
+        $stmt = $this->db->prepare($sql);
+        $stmt->bind_param(
+            "sssi",
+            $data['name'],
+            $data['description'],
+            $data['image'],
+            $data['id']
+        );
+
+        $stmt->execute();
+    }
+
+    public function delete($id){
+        // Delete from package_attraction table
+        $stmt = $this->db->prepare("DELETE FROM features WHERE id = ?");
+        $stmt->bind_param("i", $id);
+        $stmt->execute();
+        $stmt->close();
+    }
+
     public function findById($id)
     {
         try {
-            $sql = "SELECT * FROM features WHERE id = '" . $id . "'";
-            $result = $this->db->query($sql);
+            $sql = "SELECT f.*, COUNT(p.name) AS package_count
+            FROM features f
+            LEFT JOIN package_feature pf ON pf.feature_id = f.id 
+            LEFT JOIN packages p ON p.id = pf.package_id
+            WHERE f.id = ?
+            GROUP BY f.id
+            ";
+           $stmt = $this->db->prepare($sql);
+           $stmt->bind_param("i", $id);
+           $stmt->execute();
+           $result = $stmt->get_result();
             
             return $result->fetch_assoc();
         } catch (Exception $e) {

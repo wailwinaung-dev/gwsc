@@ -24,6 +24,12 @@ $features = $featureTable->getAll();
 </div>
 <?php endif ?>
 
+<?php if (FLUSH::check('error')) : ?>
+<div class="alert alert-danger">
+    <?= FLUSH::message('error') ?>
+</div>
+<?php endif ?>
+
 <table class="table">
     <thead>
         <tr>
@@ -31,6 +37,7 @@ $features = $featureTable->getAll();
             <th scope="col">Name</th>
             <th scope="col">Description</th>
             <th scope="col">Image</th>
+            <th scope="col">Action</th>
         </tr>
     </thead>
     <tbody>
@@ -40,6 +47,16 @@ $features = $featureTable->getAll();
                 <td><?= $feature['name'] ?></td>
                 <td><?= $feature['description'] ?></td>
                 <td><?= $feature['image'] ?></td>
+                <td>
+                    <a href="edit.php?id=<?= $feature['id'] ?>" class="text-warning">Edit</a> | 
+                    <a 
+                        href="/gwsc/actions/admin/feature/delete.php?id=<?= $feature['id'] ?>" 
+                        class="text-danger" 
+                        onclick="return confirm('Are you sure to delete #<?= $feature['name'] ?>')"
+                    >
+                        Delete
+                    </a>
+                </td>
             </tr>
         <?php endforeach; ?>
     </tbody>
