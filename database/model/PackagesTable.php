@@ -32,7 +32,8 @@ class PackagesTable extends MySQL
                 JOIN pitch_types ON packages.pitch_type_id = pitch_types.id
 
                 JOIN campsites ON packages.campsite_id = campsites.id
-            GROUP BY packages.name";
+            GROUP BY packages.name 
+            ORDER BY packages.id DESC";
 
             $result = $this->db->query($query);
             $data = $result->fetch_all(MYSQLI_ASSOC);
@@ -150,6 +151,27 @@ class PackagesTable extends MySQL
             echo "Error updating data";
             exit;
         }
+    }
+
+    public function delete($id)
+    {
+        // Delete from package_attraction table
+        $stmt = $this->db->prepare("DELETE FROM package_attraction WHERE package_id = ?");
+        $stmt->bind_param("i", $id);
+        $stmt->execute();
+        $stmt->close();
+
+        // Delete from package_feature table
+        $stmt = $this->db->prepare("DELETE FROM package_feature WHERE package_id = ?");
+        $stmt->bind_param("i", $id);
+        $stmt->execute();
+        $stmt->close();
+
+        // Delete from packages table
+        $stmt = $this->db->prepare("DELETE FROM packages WHERE id = ?");
+        $stmt->bind_param("i", $id);
+        $stmt->execute();
+        $stmt->close();
     }
 
     public function findById($id)

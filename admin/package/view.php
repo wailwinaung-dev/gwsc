@@ -92,8 +92,14 @@ iframe {
             >
                 <?= $package['status'] ? 'Disabled' : 'Enabled' ?>
             </a>
-            <a href="" class="btn btn-warning">Edit</a>
-            <a href="" class="btn btn-danger">Delete</a>
+            <a href="edit.php?id=<?= $package['id'] ?>" class="btn btn-warning">Edit</a>
+            <a 
+                href="/gwsc/actions/admin/package/delete.php?id=<?= $package['id'] ?>" 
+                class="btn btn-danger" 
+                onclick="return confirm('Are you sure to delete #<?= $package['name'] ?>')"
+            >
+                Delete
+            </a>
         </div>
     </div>
     <div class="iframe-container">

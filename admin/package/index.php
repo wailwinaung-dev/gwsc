@@ -56,7 +56,13 @@ $packages = $packagesTable->getAll();
                 <td>
                 <a href="view.php?id=<?= $package['id'] ?>" class="text-primary">View</a> | 
                 <a href="edit.php?id=<?= $package['id'] ?>" class="text-warning">Edit</a> | 
-                <a href="#" class="text-danger">Delete</a>
+                <a 
+                    href="/gwsc/actions/admin/package/delete.php?id=<?= $package['id'] ?>" 
+                    class="text-danger" 
+                    onclick="return confirm('Are you sure to delete #<?= $package['name'] ?>')"
+                >
+                    Delete
+                </a>
                 </td>
             </tr>
         <?php endforeach; ?>
