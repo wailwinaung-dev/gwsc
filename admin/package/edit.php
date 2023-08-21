@@ -34,7 +34,7 @@ $attractions = $attractionsTable->getAll();
     include("../../layout/admin/sidebar.php") 
 ?>
 
-    <h1 class="h3">Add New Package</h1>
+    <h1 class="h3">Edit New Package</h1>
     <?php if(FLUSH::check('error')): ?>
         <div class="alert alert-warning">
             <?= FLUSH::message('error') ?>

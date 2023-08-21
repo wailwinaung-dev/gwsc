@@ -23,15 +23,15 @@ class PackagesTable extends MySQL
 
                 concat('[', GROUP_CONCAT(DISTINCT JSON_OBJECT('id',attractions.id, 'name', attractions.name, 'description', attractions.description) ORDER BY attractions.id separator ','), ']') as attractions
             FROM packages
-                JOIN package_feature ON packages.id = package_feature.package_id
-                JOIN features ON features.id = package_feature.feature_id
+                LEFT JOIN package_feature ON packages.id = package_feature.package_id
+                LEFT JOIN features ON features.id = package_feature.feature_id
 
-                JOIN package_attraction ON packages.id = package_attraction.package_id
-                JOIN attractions ON attractions.id = package_attraction.attraction_id
+                LEFT JOIN package_attraction ON packages.id = package_attraction.package_id
+                LEFT JOIN attractions ON attractions.id = package_attraction.attraction_id
 
-                JOIN pitch_types ON packages.pitch_type_id = pitch_types.id
+                LEFT JOIN pitch_types ON packages.pitch_type_id = pitch_types.id
 
-                JOIN campsites ON packages.campsite_id = campsites.id
+                LEFT JOIN campsites ON packages.campsite_id = campsites.id
             GROUP BY packages.name 
             ORDER BY packages.id DESC";
 
@@ -189,15 +189,15 @@ class PackagesTable extends MySQL
                 GROUP_CONCAT(DISTINCT features.id) as feature_ids,
                 GROUP_CONCAT(DISTINCT attractions.id) as attraction_ids
             FROM packages
-                JOIN package_feature ON packages.id = package_feature.package_id
-                JOIN features ON features.id = package_feature.feature_id
+            LEFT JOIN package_feature ON packages.id = package_feature.package_id
+            LEFT JOIN features ON features.id = package_feature.feature_id
 
-                JOIN package_attraction ON packages.id = package_attraction.package_id
-                JOIN attractions ON attractions.id = package_attraction.attraction_id
+            LEFT JOIN package_attraction ON packages.id = package_attraction.package_id
+            LEFT JOIN attractions ON attractions.id = package_attraction.attraction_id
 
-                JOIN pitch_types ON packages.pitch_type_id = pitch_types.id
+            LEFT JOIN pitch_types ON packages.pitch_type_id = pitch_types.id
 
-                JOIN campsites ON packages.campsite_id = campsites.id
+            LEFT JOIN campsites ON packages.campsite_id = campsites.id
             WHERE packages.id = " . $id . "
             GROUP BY packages.name";
 

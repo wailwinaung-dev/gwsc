@@ -25,6 +25,11 @@ $pitchTypes = $pitchTypeTable->getAll();
 </div>
 <?php endif ?>
 
+<?php if (FLUSH::check('error')) : ?>
+<div class="alert alert-danger">
+    <?= FLUSH::message('error') ?>
+</div>
+<?php endif ?>
 
 <table class="table">
     <thead>
@@ -32,6 +37,7 @@ $pitchTypes = $pitchTypeTable->getAll();
             <th scope="col">#</th>
             <th scope="col">Name</th>
             <th scope="col">created</th>
+            <th scope="col">Action</th>
         </tr>
     </thead>
     <tbody>
@@ -40,6 +46,18 @@ $pitchTypes = $pitchTypeTable->getAll();
                 <th scope="row"><?= $key +1 ?></th>
                 <td><?= $pitchTypes['name'] ?></td>
                 <td><?= $pitchTypes['created_at'] ?></td>
+                <td>
+                    <a href="edit.php?id=<?= $pitchTypes['id'] ?>" class="text-warning">
+                        Edit
+                    </a> |
+                    <a 
+                        href="/gwsc/actions/admin/pitchType/delete.php?id=<?= $pitchTypes['id'] ?>" 
+                        class="text-danger" 
+                        onclick="return confirm('Are you sure to delete #<?= $pitchTypes['name'] ?>')"
+                    >
+                        Delete
+                    </a>
+                </td>
             </tr>
         <?php endforeach; ?>
     </tbody>
