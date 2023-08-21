@@ -1,5 +1,5 @@
 <?php
-include_once( __DIR__ . '/../MySql.php');
+include_once(__DIR__ . '/../MySql.php');
 
 
 
@@ -12,9 +12,9 @@ class CampsitesTable extends MySQL
     }
 
     public function getAll()
-    {   
+    {
         try {
-            $query = "SELECT * FROM campsites";
+            $query = "SELECT * FROM campsites ORDER By id DESC";
             $result = $this->db->query($query);
             return $result->fetch_all(MYSQLI_ASSOC);
         } catch (Exception $e) {
@@ -47,16 +47,46 @@ class CampsitesTable extends MySQL
         }
     }
 
+    public function update($data)
+    {
+        $stmt = $this->db->prepare("UPDATE campsites SET name = ?, location = ?, updated_at = NOW() WHERE id = ?");
+        $stmt->bind_param('ssi', $data['name'], $data['location'], $data['id']);
+        if($stmt->execute()){
+            return true;
+        }else{
+            echo "faild to update";exit;
+        }
+        $stmt->close();
+    }
+
+    public function delete($id)
+    {
+        // Delete from package_attraction table
+        $stmt = $this->db->prepare("DELETE FROM campsites WHERE id = ?");
+        $stmt->bind_param("i", $id);
+        $stmt->execute();
+        $stmt->close();
+    }
+
     public function findById($id)
     {
         try {
-            $sql = "SELECT * FROM campsites WHERE id = '" . $id . "'";
-            $result = $this->db->query($sql);
-            
+            $sql = "SELECT c.*, COUNT(p.name) AS package_count
+            FROM campsites c
+            LEFT JOIN packages p ON p.campsite_id = c.id
+            WHERE c.id = ?
+            GROUP BY c.id
+            ORDER BY c.id DESC";
+
+            $stmt = $this->db->prepare($sql);
+            $stmt->bind_param("i", $id);
+            $stmt->execute();
+
+            $result = $stmt->get_result();
+
             return $result->fetch_assoc();
         } catch (Exception $e) {
             throw new Exception($e->getMessage());
         }
-        
     }
 }

@@ -15,8 +15,9 @@
 <?php endif; ?>
 <form action="../../actions/admin/campsite/create.php" method="post" enctype="multipart/form-data">
     <input type="type" name="name" class="form-control mb-2" placeholder="Enter Name" required>
-    <input type="type" name="location" class="form-control mb-2" placeholder="Enter Location" required>
-    <button type="submit" class="w-100 btn btn-lg btn-primary">
+    <!-- <input type="type" name="location" class="form-control mb-2" placeholder="Enter Location" required> -->
+    <textarea name="location" class="form-control mb-2" placeholder="Enter Location" require></textarea>
+    <button type="submit" class="btn btn-lg btn-primary">
         Submit
     </button>
 </form>

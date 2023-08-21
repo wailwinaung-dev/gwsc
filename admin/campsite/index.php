@@ -31,7 +31,8 @@ $campsites = $campsiteTable->getAll();
             <th scope="col">#</th>
             <th scope="col">Name</th>
             <th scope="col">Location</th>
-            <th scope="col">created</th>
+            <th scope="col">Created</th>
+            <th scope="col">Action</th>
         </tr>
     </thead>
     <tbody>
@@ -41,6 +42,16 @@ $campsites = $campsiteTable->getAll();
                 <td><?= $campsite['name'] ?></td>
                 <td><?= $campsite['location'] ?></td>
                 <td><?= $campsite['created_at'] ?></td>
+                <td>
+                    <a href="edit.php?id=<?= $campsite['id'] ?>" class="text-warning">Edit</a> | 
+                    <a 
+                        href="/gwsc/actions/admin/campsite/delete.php?id=<?= $campsite['id'] ?>" 
+                        class="text-danger" 
+                        onclick="return confirm('Are you sure to delete #<?= $campsite['name'] ?>')"
+                    >
+                        Delete
+                    </a>
+                </td>
             </tr>
         <?php endforeach; ?>
     </tbody>
