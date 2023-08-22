@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 19, 2023 at 12:06 PM
+-- Generation Time: Aug 22, 2023 at 05:30 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -66,9 +66,9 @@ CREATE TABLE `attractions` (
 --
 
 INSERT INTO `attractions` (`id`, `name`, `description`, `location`, `image`) VALUES
-(1, 'Shwe Dagon Pagoda', 'There are shwe da gon pagoda.', 'https://goo.gl/maps/hNspRvfHRLrFaK6L6', '64dde62fdc12a.jpg'),
-(2, 'MaHar Myat Mu Ni', 'This is MaHar Myat Mu Ni', 'https://goo.gl/maps/gtUvuSeemJC2RTm66', '64df1f26b46b2.jpg'),
-(3, 'Yangon Water Boom', 'This is Yangon Water Boom', 'https://goo.gl/maps/Uq2c9DxA4mqL5S4g7', '64df1ffde1252.jpg');
+(1, 'Shwe Dagon Pagoda', 'There are shwe da gon pagoda.', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3819.566314910775!2d96.14697547475272!3d16.798238819510775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1eb5e363aab97%3A0x55f0542aad97d8c7!2z4YCb4YC94YC-4YCx4YCQ4YCt4YCC4YCv4YC24YCF4YCx4YCQ4YCu4YCQ4YCx4YCs4YC6LCDhgJvhgJThgLrhgIDhgK_hgJThgLo!5e0!3m2!1smy!2smm!4v1692630221581!5m2!1smy!2smm\" width=\"300\" height=\"200\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', '64e37de6b8e84.jpg'),
+(2, 'MaHar Myat Mu Ni', 'This is MaHar Myat Mu Ni', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3700.549951435605!2d96.07592257487335!3d21.95184645543619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30cb6d4f5ff5e9d5%3A0x9352ca8131e3edf2!2z4YCZ4YCf4YCs4YCZ4YCv4YCU4YCt4YCb4YCv4YCV4YC64YCb4YC-4YCE4YC64YCQ4YCx4YCs4YC64YCZ4YC84YCQ4YC64YCA4YC84YCu4YC4!5e0!3m2!1smy!2smm!4v1692630693029!5m2!1smy!2smm\" width=\"300\" height=\"200\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', '64df1f26b46b2.jpg'),
+(3, 'Yangon Water Boom', 'This is Yangon Water Boom', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3820.067070115224!2d96.1977028747522!3d16.773338420204936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1ed00c9e28a09%3A0x5aa9871d473f1bb8!2sYangon%20Water%20Boom!5e0!3m2!1smy!2smm!4v1692630819705!5m2!1smy!2smm\" width=\"300\" height=\"200\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', '64df1ffde1252.jpg');
 
 -- --------------------------------------------------------
 
@@ -110,8 +110,8 @@ CREATE TABLE `campsites` (
 --
 
 INSERT INTO `campsites` (`id`, `name`, `location`, `created_at`, `updated_at`) VALUES
-(1, 'Yangon Campsite', 'https://goo.gl/maps/1F2Ueaixp4MoVEPR9', '2023-08-17 16:15:49', '2023-08-17 16:15:49'),
-(2, 'Mandalay Campsite', 'https://goo.gl/maps/gtUvuSeemJC2RTm66', '2023-08-18 13:54:11', '2023-08-18 13:54:11');
+(1, 'Yangon Campsite', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d488797.9785910376!2d95.8519060836728!3d16.839536841517816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1949e223e196b%3A0x56fbd271f8080bb4!2z4YCb4YCU4YC64YCA4YCv4YCU4YC6!5e0!3m2!1smy!2smm!4v1692607750595!5m2!1smy!2smm\" width=\"300\" height=\"200\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', '2023-08-17 16:15:49', '2023-08-21 15:26:38'),
+(2, 'Mandalay Campsite', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d118427.04902531789!2d95.99342209257541!3d21.94049860069746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30cb6d23f0d27411%3A0x24146be01e4e5646!2z4YCZ4YCU4YC54YCQ4YCc4YCx4YC4!5e0!3m2!1smy!2smm!4v1692608218998!5m2!1smy!2smm\" width=\"300\" height=\"200\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', '2023-08-18 13:54:11', '2023-08-21 15:27:30');
 
 -- --------------------------------------------------------
 
@@ -175,7 +175,7 @@ CREATE TABLE `features` (
 --
 
 INSERT INTO `features` (`id`, `name`, `description`, `image`) VALUES
-(1, 'Wifi Free', 'This wifi is free', '64ddcadadcab9.jpg'),
+(1, 'Wifi Free', 'Wifi is 100% free.', '64e3750f3287c.png'),
 (2, 'Free Lunch', 'This is lunch feature', '64ddd86713add.jpg'),
 (3, 'Car Parking', 'Free Car Pariing', '64df1d4fee66b.png');
 
@@ -204,8 +204,8 @@ CREATE TABLE `packages` (
 --
 
 INSERT INTO `packages` (`id`, `pitch_type_id`, `campsite_id`, `name`, `description`, `price`, `image`, `location`, `status`, `updated_at`, `created_at`) VALUES
-(2, 1, 1, '2 Tent', '4 people accepted', 20000, '64df315a89c63.jpeg', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d198067.53662786845!2d96.02775176160931!3d16.99135865392792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1949e223e196b%3A0x56fbd271f8080bb4!2z4YCb4YCU4YC64YCA4YCv4YCU4YC6!5e0!3m2!1smy!2smm!4v1692438484618!5m2!1smy!2smm\"  loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', 0, '2023-08-18 15:22:42', '2023-08-18 15:22:42'),
-(3, 3, 2, 'Bite Pu Tent', 'This is bar nyar', 10000, '64e03215ccdea.jfif', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d48018.10528919934!2d96.10646459089804!3d21.966604813262222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1smy!2smm!4v1692433398220!5m2!1smy!2smm\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', 0, '2023-08-19 09:38:05', '2023-08-19 09:38:05');
+(2, 1, 1, 'River View Tent', 'Only 4 people accepted', 20000, '64e2e56b08e6a.jpg', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d198067.53662786845!2d96.02775176160931!3d16.99135865392792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1949e223e196b%3A0x56fbd271f8080bb4!2z4YCb4YCU4YC64YCA4YCv4YCU4YC6!5e0!3m2!1smy!2smm!4v1692438484618!5m2!1smy!2smm\"  loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', 1, '2023-08-21 10:47:47', '2023-08-18 15:22:42'),
+(3, 3, 2, 'Bite Pu Tent', 'Take your adventure with nature ', 15000, '64e2d348d18e9.jpg', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d48018.10528919934!2d96.10646459089804!3d21.966604813262222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1smy!2smm!4v1692433398220!5m2!1smy!2smm\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', 1, '2023-08-21 09:33:25', '2023-08-19 09:38:05');
 
 -- --------------------------------------------------------
 
@@ -223,9 +223,9 @@ CREATE TABLE `package_attraction` (
 --
 
 INSERT INTO `package_attraction` (`package_id`, `attraction_id`) VALUES
+(3, 2),
 (2, 1),
-(2, 3),
-(3, 2);
+(2, 3);
 
 -- --------------------------------------------------------
 
@@ -243,11 +243,11 @@ CREATE TABLE `package_feature` (
 --
 
 INSERT INTO `package_feature` (`package_id`, `feature_id`) VALUES
-(2, 1),
-(2, 3),
 (3, 1),
 (3, 2),
-(3, 3);
+(3, 3),
+(2, 1),
+(2, 3);
 
 -- --------------------------------------------------------
 
@@ -269,8 +269,7 @@ CREATE TABLE `pitch_types` (
 INSERT INTO `pitch_types` (`id`, `name`, `created_at`, `updated_at`) VALUES
 (1, 'Tent Pitch', '2023-08-15 17:54:44', '2023-08-15 17:54:44'),
 (2, 'Touring Caravan Pitch', '2023-08-15 17:54:44', '2023-08-15 17:54:44'),
-(3, 'Motorhome Pitch', '2023-08-15 17:55:16', '2023-08-15 17:55:16'),
-(4, 'Test Pitch', '2023-08-17 16:28:29', '2023-08-17 16:28:29');
+(3, 'Motorhome Pitch', '2023-08-15 17:55:16', '2023-08-15 17:55:16');
 
 -- --------------------------------------------------------
 
@@ -386,7 +385,7 @@ ALTER TABLE `admins`
 -- AUTO_INCREMENT for table `attractions`
 --
 ALTER TABLE `attractions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `bookings`
@@ -398,7 +397,7 @@ ALTER TABLE `bookings`
 -- AUTO_INCREMENT for table `campsites`
 --
 ALTER TABLE `campsites`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `contacts`
@@ -416,13 +415,13 @@ ALTER TABLE `customers`
 -- AUTO_INCREMENT for table `features`
 --
 ALTER TABLE `features`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `packages`
 --
 ALTER TABLE `packages`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `pitch_types`
