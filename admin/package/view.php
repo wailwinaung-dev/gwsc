@@ -37,76 +37,90 @@ iframe {
   width: 100%;
   height: 100%;
 }
+
+.row{
+    display: flex;
+}
+.left, .right{
+    padding: 15px;
+    width: 50%;
+}
 </style>
-
-<?php if (FLUSH::check('success')) : ?>
-    <div class="alert alert-success">
-        <?= FLUSH::message('success') ?>
+<!-- Main -->
+<main class="main-container">
+    <div class="main-title">
+        <h2>Add New Package</h2> 
     </div>
-<?php endif ?>
+    <?php if (FLUSH::check('success')) : ?>
+        <div class="alert alert-success">
+            <?= FLUSH::message('success') ?>
+        </div>
+    <?php endif ?>
 
-<div class="row">
-    <div class="col-md-6">
-        <img width="100%" src="../../actions/photos/packages/<?= $package['image'] ?>" alt="<?= $package['name'] ?>" class="img-fluid img-thumbnail">
-    </div>
-    <div class="col-md-6">
-        <div class="h3"><?= $package['name'] ?></div>
-        <p class="lead">
-            <?= $package['description'] ?>
-        </p>
-        <p>
-            Price: <b>$ <?= $package['price'] ?></b>
-        </p>
-        <p>
-            Pitch Type: <b><?= $package['pitch_type_name'] ?></b>
-        </p>
-        <p>
-            Campsite: <b><?= $package['campsite_name'] ?></b>
-        </p>
+    <div class="row">
+        <div class="left">
+            <img width="100%" src="../../actions/photos/packages/<?= $package['image'] ?>" alt="<?= $package['name'] ?>">
+        </div>
+        <div class="right">
+            <h3>
+                <?= $package['name'] ?>
+            </h3>
+            <p>
+                <?= $package['description'] ?>
+            </p>
+            <p>
+                Price: <b>$ <?= $package['price'] ?></b>
+            </p>
+            <p>
+                Pitch Type: <b><?= $package['pitch_type_name'] ?></b>
+            </p>
+            <p>
+                Campsite: <b><?= $package['campsite_name'] ?></b>
+            </p>
 
-        <p>
-            Status: <b class="<?= $package['status'] ? 'text-success' : 'text-danger' ?>"><?= $package['status'] ? 'Enabled' : 'Disabled' ?></b>
-        </p>
+            <p>
+                Status: <b class="<?= $package['status'] ? 'text-success' : 'text-danger' ?>"><?= $package['status'] ? 'Enabled' : 'Disabled' ?></b>
+            </p>
 
-        <p>
-            Features: <b class="text-primary"> |
-                <?php foreach ($features as $key => $feature) : ?>
-                    <?= $feature->name ?> |
-                <?php endforeach; ?>
-            </b>
-        </p>
+            <p>
+                Features: <b class="text-primary"> |
+                    <?php foreach ($features as $key => $feature) : ?>
+                        <?= $feature->name ?> |
+                    <?php endforeach; ?>
+                </b>
+            </p>
 
-        <p>
-            Local Attractions: <b class="text-primary"> |
-                <?php foreach ($attractions as $key => $attraction) : ?>
-                    <?= $attraction->name ?> |
-                <?php endforeach; ?>
-            </b>
-        </p>
+            <p>
+                Local Attractions: <b class="text-primary"> |
+                    <?php foreach ($attractions as $key => $attraction) : ?>
+                        <?= $attraction->name ?> |
+                    <?php endforeach; ?>
+                </b>
+            </p>
 
-        <div>
-            <a 
-                href="/gwsc/actions/admin/package/toggle_status.php?id=<?= $package['id'] ?>" 
-                class="btn btn-secondary" 
-                onclick="return confirm('Are you sure to enable <?= $package['name'] ?>?');"
-            >
-                <?= $package['status'] ? 'Disabled' : 'Enabled' ?>
-            </a>
-            <a href="edit.php?id=<?= $package['id'] ?>" class="btn btn-warning">Edit</a>
-            <a 
-                href="/gwsc/actions/admin/package/delete.php?id=<?= $package['id'] ?>" 
-                class="btn btn-danger" 
-                onclick="return confirm('Are you sure to delete #<?= $package['name'] ?>')"
-            >
-                Delete
-            </a>
+            <div>
+                <a 
+                    href="/gwsc/actions/admin/package/toggle_status.php?id=<?= $package['id'] ?>" 
+                    class="btn btn-secondary" 
+                    onclick="return confirm('Are you sure to enable <?= $package['name'] ?>?');"
+                >
+                    <?= $package['status'] ? 'Disabled' : 'Enabled' ?>
+                </a>
+                <a href="edit.php?id=<?= $package['id'] ?>" class="btn btn-warning">Edit</a>
+                <a 
+                    href="/gwsc/actions/admin/package/delete.php?id=<?= $package['id'] ?>" 
+                    class="btn btn-danger" 
+                    onclick="return confirm('Are you sure to delete #<?= $package['name'] ?>')"
+                >
+                    Delete
+                </a>
+            </div>
         </div>
     </div>
     <div class="iframe-container">
         <?= $package['location'] ?>
     </div>
-</div>
-
+</main>
 <?php
 include("../../layout/admin/footer.php");
 ?>

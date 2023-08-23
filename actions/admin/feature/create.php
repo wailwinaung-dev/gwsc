@@ -23,7 +23,7 @@ if ($error) {
     HTTP::redirect("/admin/feature/add.php");
 }
 
-if ($type === "image/jpeg" or $type === "image/png") {
+if ($imageFileType === "jpeg" or $imageFileType === 'jpg' or $imageFileType === "png") {
 
     $file_name = uniqid() . '.' .  $imageFileType;
     move_uploaded_file($tmp, "../../photos/features/" . $file_name);
@@ -35,6 +35,6 @@ if ($type === "image/jpeg" or $type === "image/png") {
     FLUSH::message('success', 'Feature added successfully.');
     HTTP::redirect("/admin/feature/index.php");
 } else {
-    FLUSH::message('error', 'Image Type ');
+    FLUSH::message('error', 'Only JPEG and PNG files are allowed');
     HTTP::redirect("/admin/feature/add.php");
 }

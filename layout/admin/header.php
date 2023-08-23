@@ -1,17 +1,24 @@
 <?php
-    include(__DIR__ . "/../../helpers/AUTH.php");
-    $auth = Auth::check();
+include(__DIR__ . "/../../helpers/AUTH.php");
+$auth = Auth::check();
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>GWSC</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Admin Dashboard</title>
+
+    <!-- Montserrat Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/gwsc/asset/css/styles.css">
 </head>
 
 <body>
-<!-- Container  -->
-<div class="container-fluid">
-
+    <div class="grid-container">

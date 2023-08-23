@@ -1,23 +1,17 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">GWSC</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse d-flex justify-content-end align-items-center" id="navbarSupportedContent">
-
-    <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <?= $auth['first_name'] . ' ' . $auth['sur_name'] ?>
-      </button>
-
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="#">Profile Setting</a>
-        <a href="/gwsc/actions/admin/auth/Logout.php" class="dropdown-item">Logout</a>
-      </div>
-    </div>
+<!-- Navbar -->
+<header class="header">
+  <div class="menu-icon" onclick="openSidebar()">
+    <span class="material-icons-outlined">menu</span>
   </div>
-</nav>
-
-<!-- Row  -->
-<div class="row">
+  <div class="header-left">
+    <!-- <span class="material-icons-outlined">search</span> -->
+  </div>
+  <div class="header-right">
+    <!-- <span class="material-icons-outlined">notifications</span>
+    <span class="material-icons-outlined">email</span> -->
+    <span class="profile-name">
+      <?= $auth['first_name'] . ' ' . $auth['sur_name'] ?> <span class="material-icons-outlined">account_circle</span>
+    </span>
+  </div>
+</header>
+<!-- End Navbar -->

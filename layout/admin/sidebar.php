@@ -1,17 +1,59 @@
 
-<!-- Sidebar navigation menu -->
-<div class="col-md-2 mt-3">
-    <div class="list-group">
-        <a href="/gwsc/admin/dashboard.php" class="list-group-item list-group-item-action">Dashboard</a>
-        <a href="#" class="list-group-item list-group-item-action">Users (not finished)</a>
-        <a href="#" class="list-group-item list-group-item-action">Admins (not finished)</a>
-        <a href="/gwsc/admin/pitchtype/index.php" class="list-group-item list-group-item-action">Pitch Types</a>
-        <a href="/gwsc/admin/campsite/index.php" class="list-group-item list-group-item-action">Campsites</a>
-        <a href="/gwsc/admin/feature/index.php" class="list-group-item list-group-item-action">Features</a>
-        <a href="/gwsc/admin/attraction/index.php" class="list-group-item list-group-item-action">Attractions</a>
-        <a href="/gwsc/admin/package/index.php" class="list-group-item list-group-item-action">Packages</a>
+<!-- Sidebar -->
+<aside id="sidebar">
+<div class="sidebar-title">
+    <div class="sidebar-brand">
+    <span class="material-icons-outlined">festival</span> GWSC
     </div>
+    <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
 </div>
 
-<!-- Content -->
-<div class="col-md-10 mt-3">
+<ul class="sidebar-list">
+    <li class="sidebar-list-item">
+    <a href="/gwsc/admin/dashboard.php">
+        <span class="material-icons-outlined">dashboard</span> Dashboard
+    </a>
+    </li>
+    <li class="sidebar-list-item">
+    <a href="#">
+        <span class="material-icons-outlined">groups</span> Users (not yet)
+    </a>
+    </li>
+    <li class="sidebar-list-item">
+    <a href="#">
+        <span class="material-icons-outlined">supervisor_account</span> Admins (not yet)
+    </a>
+    </li>
+    <li class="sidebar-list-item">
+    <a href="/gwsc/admin/pitchtype/index.php">
+        <span class="material-icons-outlined">category</span> Pitch Types
+    </a>
+    </li>
+    <li class="sidebar-list-item">
+    <a href="/gwsc/admin/campsite/index.php">
+        <span class="material-icons-outlined">forest</span> Campsites
+    </a>
+    </li>
+    <li class="sidebar-list-item">
+    <a href="/gwsc/admin/feature/index.php">
+        <span class="material-icons-outlined">featured_play_list</span> Features
+    </a>
+    </li>
+    <li class="sidebar-list-item">
+    <a href="/gwsc/admin/attraction/index.php">
+        <span class="material-icons-outlined">attractions</span> Attractions
+    </a>
+    </li>
+    <li class="sidebar-list-item">
+    <a href="/gwsc/admin/package/index.php">
+        <span class="material-icons-outlined">inventory</span> Packages
+    </a>
+    </li>
+    <li class="sidebar-list-item">
+    <a href="/gwsc/actions/admin/auth/Logout.php">
+        <span class="material-icons-outlined">logout</span> Logout
+    </a>
+    </li>
+</ul>
+</aside>
+<!-- End Sidebar -->
