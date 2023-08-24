@@ -3,7 +3,7 @@
 <aside id="sidebar">
 <div class="sidebar-title">
     <div class="sidebar-brand">
-    <span class="material-icons-outlined">festival</span> GWSC
+        <span class="material-icons-outlined">festival</span> GWSC
     </div>
     <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
 </div>
@@ -15,13 +15,13 @@
     </a>
     </li>
     <li class="sidebar-list-item">
-    <a href="#">
-        <span class="material-icons-outlined">groups</span> Users (not yet)
+    <a href="/gwsc/admin/customer/index.php">
+        <span class="material-icons-outlined">groups</span> Customers
     </a>
     </li>
     <li class="sidebar-list-item">
-    <a href="#">
-        <span class="material-icons-outlined">supervisor_account</span> Admins (not yet)
+    <a href="/gwsc/admin/admin/index.php">
+        <span class="material-icons-outlined">supervisor_account</span> Admins
     </a>
     </li>
     <li class="sidebar-list-item">
@@ -49,6 +49,20 @@
         <span class="material-icons-outlined">inventory</span> Packages
     </a>
     </li>
+    <li class="sidebar-list-item">
+    <a href="/gwsc/admin/booking/index.php">
+        <span class="material-icons-outlined">view_timeline</span> Bookings
+    </a>
+    </li>
+    <li class="sidebar-list-item">
+    <a href="/gwsc/admin/review/index.php">
+        <span class="material-icons-outlined">reviews</span> Reviews
+    </a>
+    </li>
+    <li class="sidebar-list-item">
+    <a href="/gwsc/admin/contact/index.php">
+        <span class="material-icons-outlined">contact_mail</span> Contacts
+    </a>
     <li class="sidebar-list-item">
     <a href="/gwsc/actions/admin/auth/Logout.php">
         <span class="material-icons-outlined">logout</span> Logout
