@@ -1,0 +1,6 @@
+## view COUNT in Customer
+## dashboard view
+## crud admin
+## index and view for booking
+## index and view for review
+## index and view for contact

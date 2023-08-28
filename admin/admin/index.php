@@ -1,10 +1,9 @@
 <?php
-
 include('../../helpers/FLUSH.php');
-include('../../database/model/PitchTypesTable.php');
+include('../../database/model/AdminsTable.php');
 
-$pitchTypeTable = new PitchTypesTable();
-$pitchTypes = $pitchTypeTable->getAll();
+$adminsTable = new AdminsTable();
+$admins = $adminsTable->getAll();
 
 ?>
 
@@ -17,8 +16,8 @@ $pitchTypes = $pitchTypeTable->getAll();
 <!-- Main -->
 <main class="main-container">
     <div class="main-title">
-        <h2>Pitch Types</h2> 
-        <a href="add.php" class="btn btn-success">+ New Pitch Types</a>
+        <h2>Admins</h2> 
+        <a href="add.php" class="btn btn-success">+ New Admin</a>
     </div>
 
     <?php if (FLUSH::check('success')) : ?>
@@ -39,24 +38,29 @@ $pitchTypes = $pitchTypeTable->getAll();
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Name</th>
-                    <th scope="col">created</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Position</th>
                     <th scope="col">Action</th>
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($pitchTypes as $key => $pitchTypes) : ?>
+                <?php foreach ($admins as $key => $admin) : ?>
                     <tr>
                         <th scope="row"><?= $key +1 ?></th>
-                        <td><?= $pitchTypes['name'] ?></td>
-                        <td><?= $pitchTypes['created_at'] ?></td>
+                        <td><?= $admin['first_name'] . ' ' . $admin['sur_name'] ?></td>
+                        <td><?= $admin['email'] ?></td>
+                        <td><?= $admin['phone'] ?></td>
+                        <td><?= $admin['address'] ?></td>
+                        <td><?= $admin['position'] ?></td>
+                     
                         <td>
-                            <a href="edit.php?id=<?= $pitchTypes['id'] ?>" class="text-warning">
-                                Edit
-                            </a> |
+                            <a href="edit.php?id=<?= $admin['id'] ?>" class="text-warning">Edit</a> | 
                             <a 
-                                href="/gwsc/actions/admin/pitchType/delete.php?id=<?= $pitchTypes['id'] ?>" 
+                                href="/gwsc/actions/admin/admin/delete.php?id=<?= $admin['id'] ?>" 
                                 class="text-danger" 
-                                onclick="return confirm('Are you sure to delete #<?= $pitchTypes['name'] ?>')"
+                                onclick="return confirm('Are you sure to delete #<?= $admin['first_name'] . ' ' . $admin['sur_name'] ?>')"
                             >
                                 Delete
                             </a>
@@ -67,6 +71,7 @@ $pitchTypes = $pitchTypeTable->getAll();
         </table>
     </div>
 </main>
+
 <?php 
     include("../../layout/admin/footer.php");
 ?>
