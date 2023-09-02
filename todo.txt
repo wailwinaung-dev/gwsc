@@ -1,6 +1,5 @@
-## view COUNT in Customer
 ## dashboard view
-## crud admin
-## index and view for booking
-## index and view for review
-## index and view for contact
+## if no data in index, show "No Data" text
+## index for contact
+## if change input file, photo change in edit page (js)
+## change iframe link <optional>
