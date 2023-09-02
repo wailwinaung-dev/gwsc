@@ -55,11 +55,6 @@
     </a>
     </li>
     <li class="sidebar-list-item">
-    <a href="/gwsc/admin/review/index.php">
-        <span class="material-icons-outlined">reviews</span> Reviews
-    </a>
-    </li>
-    <li class="sidebar-list-item">
     <a href="/gwsc/admin/contact/index.php">
         <span class="material-icons-outlined">contact_mail</span> Contacts
     </a>
