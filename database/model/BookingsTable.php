@@ -45,4 +45,15 @@ class BookingsTable extends MySQL
         }
     }
 
+    public function statusHandler($id, $status)
+    {
+
+        try {
+            $this->db->query("UPDATE bookings SET status='" . $status . "' WHERE id='" . $id . "'");
+
+        } catch (Exception $e) {
+            throw new Exception($e->getMessage());
+        }
+    }
+
 }
