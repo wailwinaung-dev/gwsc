@@ -27,8 +27,8 @@
             <input type="hidden" name="id" value="<?= $feature['id'] ?>">
             <input type="type" name="name" class="form-control" placeholder="Enter Name" value="<?= $feature['name'] ?>" required>
             <textarea class="form-control" name="description" rows="3" placeholder="Enter Description"><?= $feature['description'] ?></textarea>
-            <input type="file" class="form-control" name="image" accept="image/*">
-            <img src="../../actions/photos/features/<?= $feature['image'] ?>" alt="" width="200px">
+            <input type="file" class="form-control" name="image" id="file" accept="image/*">
+            <img src="../../actions/photos/features/<?= $feature['image'] ?>" alt="" width="200px" id="image">
             <br>
             <button type="submit" class="btn btn-lg btn-primary">
                 Submit

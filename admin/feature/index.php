@@ -49,7 +49,9 @@ $features = $featureTable->getAll();
                         <th scope="row"><?= $key +1 ?></th>
                         <td><?= $feature['name'] ?></td>
                         <td><?= $feature['description'] ?></td>
-                        <td><?= $feature['image'] ?></td>
+                        <td>
+                            <img src="../../actions/photos/features/<?= $feature['image'] ?>" alt="" width="200px">
+                        </td>
                         <td>
                             <a href="edit.php?id=<?= $feature['id'] ?>" class="text-warning">Edit</a> | 
                             <a 

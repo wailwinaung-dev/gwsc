@@ -28,8 +28,8 @@
             <input type="type" name="name" class="form-control" placeholder="Enter Name" value="<?= $attraction['name'] ?>" required>
             <textarea class="form-control" name="description" rows="3" placeholder="Enter Description"><?= $attraction['description'] ?></textarea>
             <textarea class="form-control" name="location" rows="3" placeholder="Enter Location"><?= $attraction['location'] ?></textarea>    
-            <input type="file" class="form-control" name="image" accept="image/*">
-            <img src="../../actions/photos/attractions/<?= $attraction['image'] ?>" alt="" width="300px">
+            <input type="file" class="form-control" name="image" id="file" accept="image/*">
+            <img src="../../actions/photos/attractions/<?= $attraction['image'] ?>" alt="" width="300px" id="image">
             <br>
             <button type="submit" class="btn btn-lg btn-primary">
                 Submit

@@ -54,8 +54,8 @@ $attractions = $attractionsTable->getAll();
 
             <input type="number" name="price" class="form-control" placeholder="Enter Price" min="0" value="<?= $package['price'] ?>" required>
 
-            <input type="file" class="form-control" name="image" accept="image/*" value="D:/xampp/htdocs/gwsc/actions/photos/packages/<?= $package['image'] ?>">
-            <img src="../../actions/photos/packages/<?= $package['image'] ?>" alt="" width="300px">
+            <input type="file" class="form-control" name="image" id="file" accept="image/*">
+            <img src="../../actions/photos/packages/<?= $package['image'] ?>" alt="" width="300px" id="image">
 
             <textarea class="form-control" name="location" rows="3" placeholder="Enter Location" required><?= $package['location'] ?></textarea>
 
