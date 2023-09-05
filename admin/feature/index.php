@@ -64,6 +64,10 @@ $features = $featureTable->getAll();
                 <?php endforeach; ?>
             </tbody>
         </table>
+
+        <?php if(count($features) < 1): ?>
+            <h3 class="text-center">No Data...</h3>
+        <?php endif; ?>
     </div>
 </main>
 

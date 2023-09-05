@@ -11,6 +11,17 @@ class PackagesTable extends MySQL
         $this->db = $this->connect();
     }
 
+    public function getCount(){
+        try {
+            $sql = "SELECT COUNT(id) FROM packages";
+            $result = $this->db->query($sql);
+
+            return $result->fetch_column();
+        } catch (Exception $e) {
+            throw new Exception($e->getMessage());
+        }
+    }
+
     public function getAll()
     {
 

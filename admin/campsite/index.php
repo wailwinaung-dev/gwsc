@@ -58,6 +58,10 @@ $campsites = $campsiteTable->getAll();
                 <?php endforeach; ?>
             </tbody>
         </table>
+
+        <?php if(count($campsites) < 1): ?>
+            <h3 class="text-center">No Data...</h3>
+        <?php endif; ?>
     </div>
 </main>
    

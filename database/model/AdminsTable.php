@@ -13,7 +13,8 @@ class AdminsTable extends MySQL
     {
         try {
             $query = "SELECT * FROM admins";
-            return $this->db->query($query);;
+            $result = $this->db->query($query);
+            return $result->fetch_all(MYSQLI_ASSOC);
         } catch (Exception $e) {
             throw new Exception($e->getMessage());
         }

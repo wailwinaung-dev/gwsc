@@ -66,6 +66,10 @@ $attractions = $attractionTable->getAll();
                 <?php endforeach; ?>
             </tbody>
         </table>
+
+        <?php if(count($attractions) < 1): ?>
+            <h3 class="text-center">No Data...</h3>
+        <?php endif; ?>
     </div>
 </main>
 <?php 

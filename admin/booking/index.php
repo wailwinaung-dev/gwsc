@@ -46,7 +46,7 @@ $bookings = $bookingsTable->getAll();
                         <td><?= $booking['qty'] ?></td>
                         <td><?= $booking['price'] ?></td>
                         <td><?= $booking['tax'] ?></td>
-                        <td><?= $booking['total'] ?></td>
+                        <td><?= $booking['subtotal'] ?></td>
                         <td><?= $booking['payment_type'] ?></td>
                         <td><?= $booking['status'] ?></td>
                         <td><?= $booking['booking_date'] ?></td>
@@ -55,7 +55,7 @@ $bookings = $bookingsTable->getAll();
             </tbody>
         </table>
 
-        <?php if(isset($bookings)): ?>
+        <?php if(count($bookings) < 1): ?>
             <h3 class="text-center">No Data...</h3>
         <?php endif; ?>
     </div>

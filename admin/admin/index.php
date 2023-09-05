@@ -4,7 +4,6 @@ include('../../database/model/AdminsTable.php');
 
 $adminsTable = new AdminsTable();
 $admins = $adminsTable->getAll();
-
 ?>
 
 <?php 
@@ -69,6 +68,10 @@ $admins = $adminsTable->getAll();
                 <?php endforeach; ?>
             </tbody>
         </table>
+
+        <?php if(count($admins) < 1): ?>
+            <h3 class="text-center">No Data...</h3>
+        <?php endif; ?>
     </div>
 </main>
 

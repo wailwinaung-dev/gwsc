@@ -162,6 +162,11 @@ body {
   font-size: 45px;
 }
 
+.card-inner>h3>a {
+  text-decoration: none;
+  color: white;
+}
+
 
 /* ---------- Common Style ---------- */
 .text-center{
