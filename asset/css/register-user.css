@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1d2634;
+  color: #9e9ea4;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.material-icons-outlined {
+  vertical-align: middle;
+  line-height: 1px;
+  font-size: 35px;
+}
+
+.control {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  outline: none;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.h3 {
+  text-align: center;
+  margin-bottom:7px;
+}
+
+.container {
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrap {
+  display: flex;
+  justify-content: center;
+  background-color:white;
+  align-self: center;
+  height:70%;
+  width:70%;
+  margin-inline:auto;
+}
+
+.column-1 {
+  width: 75%;
+  margin: 3rem;
+  display: flex;
+  align-items: center;
+  color:#1d2634;
+}
+
+.main-login {
+  width: 100%;
+}
+
+.label {
+  width: 100%;
+  display: inline-block;
+}
+
+.column-2 {
+  width: 50%;
+  overflow: hidden;
+  right:0;
+}
+
+.login-img {
+  width: 100%;
+  height: 100%;
+  background-image: url("/gwsc/asset/images/LoginPicture2.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.control {
+  resize: none;
+}
+
+.banner{
+  width:40%;
+  object-fit:cover;
+  object-position:center;
+  display:auto;
+  margin-inline:auto;
+  margin-bottom:10px;
+  border-radius:10%;
+}
