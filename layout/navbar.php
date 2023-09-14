@@ -1,5 +1,5 @@
-<div class="navbar">
-    <div class="navbar-container">
+<header class="navbar">
+    <nav class="navbar-container">
         <a href="#" class="navbar-logo">GWSC</a>
         <div class="menu-button" onclick="toggleMenu()">&#9776;</div>
         <ul class="navbar-menu">
@@ -9,9 +9,10 @@
             <li><a href="#">Features</a></li>
             <li><a href="#">Contacts</a></li>
             <li><a href="#">Local Attractions</a></li>
+            <li><a href="/gwsc/login.php">Login</a></li>
         </ul>
-    </div>
-</div>
+    </nav>
+</header>
 
 <script>
     function toggleMenu() {
