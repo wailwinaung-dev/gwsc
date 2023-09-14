@@ -98,3 +98,10 @@ button {
   margin-bottom:10px;
   border-radius:10%;
 }
+
+
+@media screen and (max-width : 600px) {
+  .column-1{
+    width:100%;
+  }
+}
