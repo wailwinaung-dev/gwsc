@@ -1,102 +1,64 @@
+<?php
+include(__DIR__ . '/database/model/PackagesTable.php');
+$packagesTable = new PackagesTable();
+$packages = $packagesTable->getAll();
+// echo '<pre>';
+// var_dump($packages);
+// echo '</pre>';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pitch Types & Availability</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-            margin: 0;
-            padding: 0;
-        }
+    <?php include(__DIR__ . '/layout/header-link.php') ?>
+    <link href="./asset/css/availability.css" rel="stylesheet">
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        h1 {
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-
-        .search-box {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-
-        .search-input {
-            width: 70%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 16px;
-        }
-
-        .search-button {
-            padding: 10px 20px;
-            background-color: #007BFF;
-            color: #fff;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        .pitch-list {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .pitch-item {
-            background-color: #fff;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            margin-bottom: 10px;
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .pitch-item img {
-            max-width: 100px;
-            max-height: 100px;
-            margin-right: 20px;
-        }
-    </style>
 </head>
+
 <body>
+    <?php include(__DIR__ . '/layout/navbar.php') ?>
+    <div class="hero-image">
+        <div class="hero-text">
+            <h1 style="font-size:50px">Pitch Types & Availability</h1>
+        </div>
+    </div>
     <div class="container">
-        <h1>Pitch Types & Availability</h1>
+        <h1 class="search-text">
+            <span style="color: #00a3f8;">S</span>
+            <span style="color: #ff3139;">e</span>
+            <span style="color: #ff9e00;">a</span>
+            <span style="color: #00aa37;">r</span>
+            <span style="color: #00a3f8;">c</span>
+            <span style="color: #ff3139;">h</span>
+        </h1>
+
         <div class="search-box">
-            <input type="text" class="search-input" placeholder="Search by pitch type or location">
-            <button class="search-button">Search</button>
+            <form method="post" >
+                <input type="text" class="search-input" placeholder="Search by Pitch Name">
+                <button type="submit" class="search-button">Search</button>
+            </form>
         </div>
         <ul class="pitch-list">
-            <li class="pitch-item">
-                <img src="pitch1.jpg" alt="Pitch 1">
-                <div>
-                    <h2>Pitch Type 1</h2>
-                    <p>Location: Location 1</p>
-                    <p>Availability: Available</p>
-                </div>
-            </li>
-            <li class="pitch-item">
-                <img src="pitch2.jpg" alt="Pitch 2">
-                <div>
-                    <h2>Pitch Type 2</h2>
-                    <p>Location: Location 2</p>
-                    <p>Availability: Not Available</p>
-                </div>
-            </li>
-            <!-- Add more pitch items as needed -->
+            <?php foreach ($packages as $key => $package) : ?>
+                <li class="pitch-item">
+                    <img src="./actions//photos/packages/<?= $package['image'] ?>" alt="<?= $package['name'] ?>">
+                    <div class="pitch-content">
+                        <h2><?= $package['name'] ?></h2>
+                        <p class="price">$<?php echo $package['price']; ?></p>
+                        <p><strong>Campsite:</strong> <?php echo $package['campsite_name']; ?></p>
+                        <p><strong>Pitch Type:</strong> <?php echo $package['pitch_type_name']; ?></p>
+                        <button class="btn">View Detail <i class="fa fa-angle-double-right"></i></button>
+                    </div>
+                </li>
+            <?php endforeach; ?>
         </ul>
     </div>
+
+    <?php include(__DIR__ . '/layout/footer.php') ?>
 </body>
+
 </html>

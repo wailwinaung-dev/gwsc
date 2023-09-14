@@ -12,10 +12,9 @@ $packages = $packagesTable->getAll();
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <?php include(__DIR__ . '/layout/header-link.php') ?>
     <link href="./asset/css/information.css" rel="stylesheet">
-    <link href="./asset/css/navbar.css" rel="stylesheet">
-    <link href="./asset/css/footer.css" rel="stylesheet">
+    <title>Information</title>
 
 </head>
 
@@ -37,7 +36,7 @@ $packages = $packagesTable->getAll();
                 <h2><?php echo $package['name']; ?></h2>
                 <p><?php echo $package['description']; ?></p>
                 <p class="price">$<?php echo $package['price']; ?></p>
-                <p><strong>Location:</strong> <?php echo $package['campsite_name']; ?></p>
+                <p><strong>Campsite:</strong> <?php echo $package['campsite_name']; ?></p>
                 <p><strong>Pitch Type:</strong> <?php echo $package['pitch_type_name']; ?></p>
 
                 <!-- Display features -->
