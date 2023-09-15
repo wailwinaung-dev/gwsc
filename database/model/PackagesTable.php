@@ -11,7 +11,8 @@ class PackagesTable extends MySQL
         $this->db = $this->connect();
     }
 
-    public function getCount(){
+    public function getCount()
+    {
         try {
             $sql = "SELECT COUNT(id) FROM packages";
             $result = $this->db->query($sql);
@@ -50,6 +51,26 @@ class PackagesTable extends MySQL
             $data = $result->fetch_all(MYSQLI_ASSOC);
 
             return $data;
+        } catch (Exception $e) {
+            throw new Exception($e->getMessage());
+        }
+    }
+
+    public function search($searchText)
+    {
+
+        try {
+            $query = "SELECT packages.*, 
+                pitch_types.name AS pitch_type_name,
+                campsites.name AS campsite_name
+            FROM packages
+            LEFT JOIN pitch_types ON packages.pitch_type_id = pitch_types.id
+            LEFT JOIN campsites ON packages.campsite_id = campsites.id
+            WHERE packages.name LIKE '%$searchText%'";
+
+            $result = $this->db->query($query);
+
+            return $result->fetch_all(MYSQLI_ASSOC);
         } catch (Exception $e) {
             throw new Exception($e->getMessage());
         }
@@ -219,8 +240,6 @@ class PackagesTable extends MySQL
             throw new Exception($e->getMessage());
         }
     }
-
-
 
     public function toggleStatus($id)
     {

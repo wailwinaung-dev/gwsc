@@ -1,10 +1,10 @@
 <?php
 include(__DIR__ . '/database/model/PackagesTable.php');
 $packagesTable = new PackagesTable();
-$packages = $packagesTable->getAll();
-// echo '<pre>';
-// var_dump($packages);
-// echo '</pre>';
+
+if($_POST['search-text']){
+   $packages = $packagesTable->search($_POST['search-text']);
+}
 ?>
 
 <!DOCTYPE html>
@@ -36,12 +36,11 @@ $packages = $packagesTable->getAll();
             <span style="color: #ff3139;">h</span>
         </h1>
 
-        <div class="search-box">
-            <form method="post" >
-                <input type="text" class="search-input" placeholder="Search by Pitch Name">
-                <button type="submit" class="search-button">Search</button>
-            </form>
-        </div>
+        <form method="post" action="availability.php" class="search-box">
+            <input type="text" class="search-input" placeholder="Search by Pitch Name" name="search-text" value="<?= $_POST['search-text'] ?? '' ?>">
+            <button type="submit" class="search-button">Search</button>
+        </form>
+
         <ul class="pitch-list">
             <?php foreach ($packages as $key => $package) : ?>
                 <li class="pitch-item">
