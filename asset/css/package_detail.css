@@ -1,0 +1,113 @@
+:root {
+    --success: #4CAF50;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+
+/* ---------- MAIN ---------- */
+
+.main-container {
+    color: #666;
+    padding-top: 70px;
+    overflow-x: hidden;
+}
+
+/* ---------- Common Style ---------- */
+.text-center {
+    text-align: center !important;
+}
+
+
+.btn {
+    display: inline-block;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-success {
+    background-color: var(--success);
+}
+
+
+.iframe-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+    /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+    margin: 15px;
+}
+
+/* Then style the iframe to fit in the container div with full height and width */
+iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+}
+
+.left,
+.right {
+    padding: 15px;
+    width: 50%;
+}
+
+
+/* ---------- MEDIA QUERIES ---------- */
+
+/* Medium <= 992px */
+
+@media screen and (max-width: 992px) {}
+
+/* Small <= 768px */
+
+@media screen and (max-width: 768px) {
+
+    .row {
+        flex-direction: column;
+    }
+
+    .row .left,
+    .row .right {
+        padding: 0;
+        width: 100%;
+    }
+
+    .row .right{
+        padding: 15px;
+    }
+
+    img{
+        width: 100%;
+    }
+
+    .iframe-container{
+        margin: 0;
+    }
+
+    .btn{
+
+        margin-left: 20px;
+        margin-bottom: 20px;
+        padding: 20px 30px
+    }
+}

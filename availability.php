@@ -1,7 +1,7 @@
 <?php
 include(__DIR__ . '/database/model/PackagesTable.php');
 $packagesTable = new PackagesTable();
-
+$packages = null;
 if(isset($_POST['search-text'])){
    $packages = $packagesTable->search($_POST['search-text']);
 }
@@ -54,7 +54,7 @@ if(isset($_POST['search-text'])){
                         <p class="price">$<?php echo $package['price']; ?></p>
                         <p><strong>Campsite:</strong> <?php echo $package['campsite_name']; ?></p>
                         <p><strong>Pitch Type:</strong> <?php echo $package['pitch_type_name']; ?></p>
-                        <a href class="btn">View Detail <i class="fa fa-angle-double-right"></i></a>
+                        <a href="package_detail.php?id=<?= $package['id'] ?>" class="btn">View Detail <i class="fa fa-angle-double-right"></i></a>
                     </div>
                 </li>
             <?php endforeach; ?>
