@@ -60,6 +60,12 @@ class PackagesTable extends MySQL
     {
 
         try {
+            $searchText = trim($searchText);
+
+            if(!$searchText){
+                return null;
+            }
+
             $query = "SELECT packages.*, 
                 pitch_types.name AS pitch_type_name,
                 campsites.name AS campsite_name

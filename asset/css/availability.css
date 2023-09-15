@@ -106,6 +106,8 @@ h1 {
 }
 
 .btn {
+    display: inline-block;
+    text-decoration: none;
     background-color: DodgerBlue;
     border: none;
     color: white;

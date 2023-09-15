@@ -2,9 +2,10 @@
 include(__DIR__ . '/database/model/PackagesTable.php');
 $packagesTable = new PackagesTable();
 
-if($_POST['search-text']){
+if(isset($_POST['search-text'])){
    $packages = $packagesTable->search($_POST['search-text']);
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -42,7 +43,10 @@ if($_POST['search-text']){
         </form>
 
         <ul class="pitch-list">
-            <?php foreach ($packages as $key => $package) : ?>
+            <?php if($packages === null): ?>
+                <h3 style="text-align: center;">Results will be here.</h3>
+            <?php elseif(count($packages) > 0): ?>
+                <?php foreach ($packages as $key => $package) : ?>
                 <li class="pitch-item">
                     <img src="./actions//photos/packages/<?= $package['image'] ?>" alt="<?= $package['name'] ?>">
                     <div class="pitch-content">
@@ -50,10 +54,13 @@ if($_POST['search-text']){
                         <p class="price">$<?php echo $package['price']; ?></p>
                         <p><strong>Campsite:</strong> <?php echo $package['campsite_name']; ?></p>
                         <p><strong>Pitch Type:</strong> <?php echo $package['pitch_type_name']; ?></p>
-                        <button class="btn">View Detail <i class="fa fa-angle-double-right"></i></button>
+                        <a href class="btn">View Detail <i class="fa fa-angle-double-right"></i></a>
                     </div>
                 </li>
             <?php endforeach; ?>
+            <?php elseif(count($packages) < 1): ?>
+                <h3 style="text-align: center;">No Data Found.</h3>
+            <?php endif; ?>
         </ul>
     </div>
 
