@@ -38,7 +38,7 @@ include("./helpers/FLUSH.php");
                     <input type="text" name="phone" class="control mb-2" placeholder="Phone" required>
                     <label class='label'>Address</label>
                     <textarea name="address" class="control mb-2" placeholder="Address" required></textarea>
-                    <label class='label'>Address</label>
+                    <label class='label'>Password</label>
                     <input type="password" name="password" class="control mb-2" placeholder="Password" required>
                     <button type="submit" class="w-100 btn btn-lg btn-primary">
                         Register

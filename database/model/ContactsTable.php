@@ -11,7 +11,8 @@ class ContactsTable extends MySQL
         $this->db = $this->connect();
     }
 
-    public function getCount(){
+    public function getCount()
+    {
         try {
             $sql = "SELECT COUNT(id) FROM contacts";
             $result = $this->db->query($sql);
@@ -36,4 +37,33 @@ class ContactsTable extends MySQL
         }
     }
 
+    public function insert($data)
+    {
+        try {
+            $query = " INSERT ";
+            $query .= " INTO contacts(email,first_name,last_name,message,created_at,updated_at) VALUES( ";
+            $query .= " ? ,";
+            $query .= " ? ,";
+            $query .= " ? ,";
+            $query .= " ? ,";
+            $query .= " NOW() ,";
+            $query .= " NOW()  ";
+            $query .= " );";
+
+            $stmt = $this->db->prepare($query);
+
+            $stmt->bind_param(
+                "ssss",
+                $data['first_name'],
+                $data['last_name'],
+                $data['email'],
+                $data['message']
+            );
+            $stmt->execute(); // execute with data! 
+
+            return $this->db->insert_id;
+        } catch (Exception $e) {
+            throw new Exception($e->getMessage());
+        }
+    }
 }
