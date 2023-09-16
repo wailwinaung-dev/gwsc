@@ -1,0 +1,55 @@
+.container{
+    width:80%;
+    margin:auto;
+    display:block;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:1rem;
+    padding: 1rem;
+}
+
+/* Container for the grid */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 16px;
+    padding: 16px;
+}
+
+/* Basic styling for the card */
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    width: 100%; /* Take up the available space in the column */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    color: #04622a;
+}
+
+/* Style for the package image */
+.card img {
+    max-width: 25%;
+    height: auto;
+}
+
+/* Style for the package name */
+.card h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+/* Style for the package description */
+.card p {
+    font-size: 1rem;
+    color: #666;
+}
+.title{
+    margin:0.5rem;
+    text-align:center;
+    padding:0.75rem;
+    border-bottom:1px double #666;
+}

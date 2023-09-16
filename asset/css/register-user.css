@@ -13,14 +13,28 @@ body {
 }
 
 .control {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  background-color: #f8f8f8;
+  border-radius: 6px;
+  border: solid 1px #e5e5e5;
+  color: inherit;
+  display: block;
+  outline: 0;
+  padding: 0.8rem;
+  text-decoration: none;
   width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-  outline: none;
+  margin-block:0.2rem;
 }
+
+.label {
+  width: 100%;
+  margin-bottom: 0.3rem;
+  display:inline-block;
+}
+
 
 button {
   background-color: #4CAF50;

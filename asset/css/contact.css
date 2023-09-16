@@ -1,0 +1,49 @@
+.contact-container {
+    width: 50%;
+    margin-inline: auto;
+    display: block;
+    margin-block: 2rem;
+}
+
+.name-container {
+    display: flex;
+    gap: 1rem;
+}
+
+.first-name,
+.last-name {
+    width: 50%;
+}
+
+/* .control {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    outline: none;
+} */
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+@media screen and (max-width : 760px) {
+
+    .first-name,
+    .last-name {
+        width: 100%;
+    }
+
+    .name-container {
+        display: block;
+        gap: 0;
+    }
+}

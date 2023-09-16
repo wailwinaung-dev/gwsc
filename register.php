@@ -45,7 +45,7 @@ include("./helpers/FLUSH.php");
                     </button>
                 </form>
                 <br>
-                <a href="register.php">Register</a>
+                <a href="register.php">Login</a>
             </div>
         </div>
     </div>

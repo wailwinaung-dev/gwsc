@@ -10,6 +10,7 @@ include("./helpers/FLUSH.php");
     <title>Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' href='/gwsc/asset/css/login-user.css' />
+    <link rel='stylesheet' href='/gwsc/asset/css/common.css' />
 </head>
 
 <body class="text-center">
@@ -29,9 +30,9 @@ include("./helpers/FLUSH.php");
                 <?php endif; ?>
                 <form action="actions/login.php" method="post">
                     <label class='label'>Email</label>
-                    <input type="email" name="email" class="form-control mb-2" placeholder="Email" required>
+                    <input type="email" name="email" class="control mb-2" placeholder="Email" required>
                     <label class='label'>Password</label>
-                    <input type="password" name="password" class="form-control mb-2" placeholder="Password" required>
+                    <input type="password" name="password" class="control mb-2" placeholder="Password" required>
                     <button type="submit" class="w-100 btn btn-lg btn-primary">
                         Login
                     </button>
