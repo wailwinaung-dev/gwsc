@@ -18,11 +18,11 @@
 
         <div class="footer-social">
             <h4>Address</h4>
-            <a href="#" target="_blank">25th Street, UK City, Middlesex, United Kingdom</a>
+            <a href="#" target="_blank">No.1, Shwe Taung Kyar Street, Yangon</a>
             <a href="#" target="_blank">Tel: +123 456 7890</a>
             <a href="#" target="_blank">Email: contact@gwsc.com</a>
         </div>
-        
+
         <div class="footer-social">
             <h4>Social Media</h4>
             <a href="#" target="_blank"><i class="fa fa-facebook"></i> Facebook</a>

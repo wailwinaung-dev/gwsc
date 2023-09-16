@@ -1,15 +1,8 @@
-/* Reset some default styles */
-body, html {
-    margin: 0;
-    padding: 0;
-}
-
 /* Basic styles for the footer */
 footer {
     padding-top: 20px;
     background-color: #fff;
     color: #666;
-    text-align: center;
 }
 
 .link-container {
@@ -23,6 +16,7 @@ footer {
 }
 
 .footer-logo {
+    text-align: center;
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
@@ -59,6 +53,24 @@ footer {
     margin-bottom: 5px;
 }
 
+.fa-facebook{
+    color: #1877F2;
+}
+
+.fa-twitter{
+    color: #00acee;
+}
+
+.fa-instagram {
+    color: transparent;
+    background: -webkit-radial-gradient(30% 107%, circle, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    background: -o-radial-gradient(30% 107%, circle, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
 .copyright {
     text-align: center;
     background-color: #222;
@@ -69,6 +81,10 @@ footer {
 
 /* Media Query for responsiveness */
 @media (max-width: 768px) {
+    footer {
+        text-align: center;
+    }
+
     .link-container {
         flex-direction: column;
         align-items: center;

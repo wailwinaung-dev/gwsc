@@ -3,15 +3,22 @@ Admin.....
 ## if no data in index, show "No Data" text ✅
 ## index for contact ✅
 ## if change input file, photo change in edit page (js) ✅
-## change iframe link <optional> ❗
+## change iframe link <optional> ✅
 ## toggle status of booking by admin ✅
 
 
 Customer.....
 Login <almost done>
 Register <almost done>
+Home Page
+Information Page ✅
+PitchType and availability page ✅
+Package Detail ✅
 add Booking
+review ✅
 add Review
-Search Packages
+Features Page
+Contact Page 
+Local Attraction
 profile page
 booking list <login customer>
