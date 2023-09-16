@@ -22,3 +22,6 @@ Contact Page
 Local Attraction
 profile page
 booking list <login customer>
+
+Database.....
+need to change (varchar) to (text) in review

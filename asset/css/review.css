@@ -40,17 +40,30 @@ main {
     margin-bottom: 10px;
 }
 
+.review-rating .star{
+    color: #FFD700;
+    font-size: 18px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
 label {
     display: block;
     margin-bottom: 5px;
+    font-weight: bold;
 }
 
+input[type="text"],
+input[list="browsers"],
+select,
 textarea {
     width: 100%;
     padding: 10px;
-    margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 16px;
 }
 
 button[type="submit"] {
@@ -74,6 +87,7 @@ button[type="submit"]:hover {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
     padding: 20px;
+    margin-bottom: 10px;
 }
 
 .review-header {
@@ -118,3 +132,4 @@ button[type="submit"]:hover {
 
     }
 }
+
