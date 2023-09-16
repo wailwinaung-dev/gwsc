@@ -42,7 +42,9 @@ $campsites = $campsiteTable->getAll();
                     <tr>
                         <th scope="row"><?= $key +1 ?></th>
                         <td><?= $campsite['name'] ?></td>
-                        <td><?= $campsite['location'] ?></td>
+                        <td>
+                            <iframe src="<?= $campsite['location'] ?>" frameborder="0" width="300" height="150"></iframe>
+                        </td>
                         <td><?= $campsite['created_at'] ?></td>
                         <td>
                             <a href="edit.php?id=<?= $campsite['id'] ?>" class="text-warning">Edit</a> | 

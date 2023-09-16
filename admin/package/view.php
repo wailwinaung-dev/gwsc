@@ -116,7 +116,7 @@ iframe {
         </div>
     </div>
     <div class="iframe-container">
-        <?= $package['location'] ?>
+        <iframe src="<?= $package['location'] ?>" frameborder="0"></iframe>  
     </div>
 </main>
 <?php
