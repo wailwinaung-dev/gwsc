@@ -48,9 +48,7 @@ iframe {
 </style>
 <!-- Main -->
 <main class="main-container">
-    <div class="main-title">
-        <h2>Add New Package</h2> 
-    </div>
+
     <?php if (FLUSH::check('success')) : ?>
         <div class="alert alert-success">
             <?= FLUSH::message('success') ?>
@@ -118,7 +116,7 @@ iframe {
         </div>
     </div>
     <div class="iframe-container">
-        <?= $package['location'] ?>
+        <iframe src="<?= $package['location'] ?>" frameborder="0"></iframe>  
     </div>
 </main>
 <?php

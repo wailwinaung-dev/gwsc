@@ -48,7 +48,9 @@ $attractions = $attractionTable->getAll();
                         <th scope="row"><?= $key +1 ?></th>
                         <td><?= $attraction['name'] ?></td>
                         <td><?= $attraction['description'] ?></td>
-                        <td><?= $attraction['location'] ?></td>
+                        <td>
+                            <iframe src="<?= $attraction['location'] ?>" frameborder="0" width="300" height="200"></iframe>
+                        </td>
                         <td>
                             <img src="../../actions/photos/attractions/<?= $attraction['image'] ?>" width="300px"><br>
                         </td>

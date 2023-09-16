@@ -106,6 +106,8 @@ h1 {
 }
 
 .btn {
+    display: inline-block;
+    text-decoration: none;
     background-color: DodgerBlue;
     border: none;
     color: white;
@@ -126,7 +128,26 @@ h1 {
         align-items: center;
     }
 
+    .pitch-content{
+        padding-bottom: 15px;
+    }
+
     .pitch-item img {
         width: 100%;
     }
+
+    .search-box{
+        flex-direction: column;
+    }
+    
+    .search-input{
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: 10px;
+    }
+    .search-input, .search-button{
+        width: 100%;
+    }
+
+
 }
