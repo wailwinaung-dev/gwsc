@@ -56,4 +56,27 @@ class ReviewsTable extends MySQL
             return $e->getMessage()();
         }
     }
+    public function getByRating(int $limit)
+    {
+        try {
+            $query = "SELECT 
+            reviews.*, 
+            packages.name AS package_name,
+            CONCAT(customers.first_name, ' ', customers.sur_name) AS customer_name
+            FROM reviews 
+            LEFT JOIN packages ON packages.id = reviews.package_id
+            LEFT JOIN customers ON customers.id = reviews.customer_id
+            WHERE rating = 5
+            ORDER BY id DESC
+            LIMIT  ". $limit;
+
+            $result = $this->db->query($query);
+
+            $data = $result->fetch_all(MYSQLI_ASSOC);
+            
+            return $data;
+        } catch (Exception $e) {
+            throw new Exception($e->getMessage());
+        }
+    }
 }

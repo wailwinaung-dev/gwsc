@@ -44,7 +44,7 @@ class PackagesTable extends MySQL
                 LEFT JOIN pitch_types ON packages.pitch_type_id = pitch_types.id
 
                 LEFT JOIN campsites ON packages.campsite_id = campsites.id
-            GROUP BY packages.name 
+            GROUP BY packages.name , packages.id
             ORDER BY packages.id DESC";
 
             $result = $this->db->query($query);
@@ -257,6 +257,40 @@ class PackagesTable extends MySQL
             $this->db->query("UPDATE packages SET status='" . !$status . "' WHERE id='" . $id . "'");
 
             return !$status;
+        } catch (Exception $e) {
+            throw new Exception($e->getMessage());
+        }
+    }
+
+    public function getFive()
+    {
+
+        try {
+            $query = "SELECT 
+                packages.*, 
+                pitch_types.name AS pitch_type_name,
+                campsites.name AS campsite_name,
+                concat('[', GROUP_CONCAT(DISTINCT JSON_OBJECT('id',features.id, 'name', features.name, 'description', features.description) ORDER BY features.id separator ','), ']') as features,
+
+                concat('[', GROUP_CONCAT(DISTINCT JSON_OBJECT('id',attractions.id, 'name', attractions.name, 'description', attractions.description) ORDER BY attractions.id separator ','), ']') as attractions
+            FROM packages
+                LEFT JOIN package_feature ON packages.id = package_feature.package_id
+                LEFT JOIN features ON features.id = package_feature.feature_id
+
+                LEFT JOIN package_attraction ON packages.id = package_attraction.package_id
+                LEFT JOIN attractions ON attractions.id = package_attraction.attraction_id
+
+                LEFT JOIN pitch_types ON packages.pitch_type_id = pitch_types.id
+
+                LEFT JOIN campsites ON packages.campsite_id = campsites.id
+            GROUP BY packages.name , packages.id
+            ORDER BY packages.id DESC
+            LIMIT 5 ";
+
+            $result = $this->db->query($query);
+            $data = $result->fetch_all(MYSQLI_ASSOC);
+
+            return $data;
         } catch (Exception $e) {
             throw new Exception($e->getMessage());
         }
