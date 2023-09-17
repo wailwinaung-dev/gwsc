@@ -39,14 +39,38 @@ class="text-danger">Logout</a> -->
 
 <body>
     <?php include "./layout/navbar.php" ?>
-    <div class="hero-image">
-        <p class='hero-text'>
-            Welcome From GWSC Camping Website.
-            Ready for adventures for you to get ultimate experience.
-        </p>
-    </div>
-    <main class="container">
+    <main class="main-container">
+        <div class="slideshow-container-intro">
+
+            <div class="mySlides2 fade">
+                <img src="/gwsc/asset/images/review_header.jpeg" style="width:100%">
+            </div>
+
+            <div class="mySlides2 fade">
+                <img src="/gwsc/asset/images/availability_header.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides2 fade">
+                <img src="/gwsc/asset/images/review_header.jpeg" style="width:100%">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
         <div class="search-card ">
+            <h2 class="intro-title">
+                Welcome From GWSC Camping Website.<br />
+                Ready for adventures for you to get ultimate experience.<br />
+                Search avaliable package through under search bar
+            </h2>
             <form method="post" action="availability.php" class="search-box center">
                 <input type="text" class="search-input" placeholder="Search by Pitch Name" name="search-text"
                     value="<?= $_POST['search-text'] ?? '' ?>">
