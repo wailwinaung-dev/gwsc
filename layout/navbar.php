@@ -5,7 +5,7 @@ if (session_status() === PHP_SESSION_NONE) {
 ?>
 <header class="navbar">
     <nav class="navbar-container">
-        <a href="#" class="navbar-logo">GWSC</a>
+        <a href="/gwsc/home.php" class="navbar-logo">GWSC</a>
         <div class="menu-button" onclick="toggleMenu()">&#9776;</div>
         <ul class="navbar-menu">
             <li><a href="/gwsc/information.php">Information</a></li>
