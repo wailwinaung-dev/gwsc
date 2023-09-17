@@ -1,0 +1,33 @@
+.main-container {
+    color: #666;
+    /* padding-top: 70px; */
+    width:75%;
+    overflow-x: hidden;
+    margin:auto;
+    display:block;
+    margin-block:.45rem;
+}
+/* Basic styling for the card */
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    width: 100%; /* Take up the available space in the column */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    display:flex;
+    align-items:stretch;
+    gap:1rem;
+    margin-block:.5rem;
+}
+
+.card img{
+    width:18%;
+    display:block;
+    margin:auto;
+    padding:0.8rem;
+}
+
+.card article{
+    width:70%;
+}
