@@ -1,4 +1,5 @@
 <?php
+session_start();
 include(__DIR__ . '/database/model/PackagesTable.php');
 $packagesTable = new PackagesTable();
 $package = $packagesTable->findById($_GET['id']);
@@ -45,10 +46,6 @@ $features = json_decode($package['features']);
                 </p>
 
                 <p>
-                    Status: <b class="<?= $package['status'] ? 'text-success' : 'text-danger' ?>"><?= $package['status'] ? 'Enabled' : 'Disabled' ?></b>
-                </p>
-
-                <p>
                     Features: <b class="text-primary"> |
                         <?php foreach ($features as $key => $feature) : ?>
                             <?= $feature->name ?> |
@@ -63,10 +60,12 @@ $features = json_decode($package['features']);
                         <?php endforeach; ?>
                     </b>
                 </p>
-
+                
+                <?php if(isset($_SESSION['customer'])): ?>
                 <div>
                     <a href="edit.php?id=<?= $package['id'] ?>" class="btn btn-success">Booking</a>
                 </div>
+                <?php endif; ?>
             </div>
         </div>
         <div class="iframe-container">

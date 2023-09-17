@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once(__DIR__ . '/database/model/PackagesTable.php');
 include_once(__DIR__ . '/database/model/ReviewsTable.php');
 
@@ -8,7 +9,7 @@ $packages = $packagesTable->getAll();
 $reviewsTable = new ReviewsTable();
 $reviews = $reviewsTable->getAll();
 // echo '<pre>';
-// var_dump($reviews);
+// var_dump(isset($_SESSION['customer']));
 // echo '</pre>';
 ?>
 <!DOCTYPE html>
@@ -26,10 +27,12 @@ $reviews = $reviewsTable->getAll();
     <?php include(__DIR__ . '/layout/navbar.php') ?>
     <div class="hero-image">
         <div class="hero-text">
-            <!-- <h1 style="font-size:50px">Customer Review</h1> -->
+            <h1 style="font-size:50px">Customer Review</h1>
         </div>
     </div>
     <main>
+        <!-- Check customer login or not  -->
+        <?php if(isset($_SESSION['customer'])): ?>
         <section class="review-form">
             <h2>Write a Review</h2>
             <form id="reviewForm" method="post" action="./actions/add_review.php">
@@ -63,6 +66,7 @@ $reviews = $reviewsTable->getAll();
                 <button type="submit" id="submit">Submit Review</button>
             </form>
         </section>
+        <?php endif; ?>
 
         <section class="reviews-list">
             <h2>Customer Reviews</h2>
@@ -98,10 +102,13 @@ $reviews = $reviewsTable->getAll();
             <h4 style="text-align: center;">No Reviews Found.</h4>
             <?php endif; ?>
         </section>
+        
     </main>
 
     <?php include(__DIR__ . '/layout/footer.php') ?>
     <script>
+
+        //choose package
         const packageList = document.getElementById('package-list');
 
         const packageId = document.getElementById('package-id');
@@ -117,6 +124,8 @@ $reviews = $reviewsTable->getAll();
             }
         });
 
+
+        //validation
         const submitBtn = document.getElementById('submit');
         const messageBox = document.getElementById('message');
 

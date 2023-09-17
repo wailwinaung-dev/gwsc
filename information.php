@@ -55,6 +55,7 @@ $packages = $packagesTable->getAll();
                 <?php endforeach; ?>
                 
                 </p>
+                <a href="package_detail.php?id=<?= $package['id'] ?>" class="btn">View Detail <i class="fa fa-angle-double-right"></i></a>
             </div>
         <?php endforeach; ?>
     </div>
