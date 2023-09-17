@@ -81,3 +81,7 @@ textarea.control {
     resize: none;
     overflow:auto;
 }
+
+text-center{
+    text-align:center;
+}
