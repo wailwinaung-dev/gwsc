@@ -1,3 +1,7 @@
+<?php
+session_start();
+include('./helpers/FLUSH.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,8 +16,8 @@
 
 <body>
     <header>
-    <?php include(__DIR__ . '/layout/navbar.php') ?>
-</header>
+        <?php include(__DIR__ . '/layout/navbar.php') ?>
+    </header>
     <div class="hero-image">
         <div class="hero-text">
             <h1 style="font-size:50px">Contact Us</h1>
@@ -21,6 +25,11 @@
     </div>
 
     <form class="contact-container" method="post" action="/gwsc/actions/contact.php">
+        <?php if (FLUSH::check('success')) : ?>
+            <div class="alert alert-success">
+                <?= FLUSH::message('success') ?>
+            </div>
+        <?php endif ?>
         <div class="name-container">
             <div class="first-name">
                 <label class="label">First Name</label>
@@ -33,7 +42,7 @@
         </div>
         <div class="">
             <label class="label">Email</label>
-            <input type="email" name="email" class="control" placeholder="Email"/>
+            <input type="email" name="email" class="control" placeholder="Email" />
         </div>
         <div class="">
             <label class="label">Message</label>

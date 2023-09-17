@@ -15,15 +15,9 @@
     width: 50%;
 }
 
-/* .control {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    outline: none;
-} */
+input, textarea{
+    background-color: white!important;
+}
 
 button {
     background-color: #4CAF50;
@@ -34,6 +28,17 @@ button {
     cursor: pointer;
     width: 100%;
 }
+
+.alert {
+    border-radius: 6px;
+    padding: 20px;
+    margin: 10px 0;
+  }
+  
+  .alert-success{
+    color: green;
+    border: 1px solid green;
+  }
 
 @media screen and (max-width : 760px) {
 

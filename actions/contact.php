@@ -20,5 +20,5 @@ $data = [
 
 $table->insert($data);
 
-FLUSH::message('success', 'Attraction added successfully.');
+FLUSH::message('success', 'Thank you for your message.');
 HTTP::redirect("/contact.php");
