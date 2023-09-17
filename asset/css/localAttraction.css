@@ -31,3 +31,10 @@
 .card article{
     width:70%;
 }
+
+@media screen and (max-width:650px) {
+    .main-container{
+        width:100%;
+        margin:0;
+    }
+}
