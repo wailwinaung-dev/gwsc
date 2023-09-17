@@ -1,7 +1,6 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #1d2634;
   color: #9e9ea4;
   font-family: 'Montserrat', sans-serif;
 }
@@ -59,21 +58,19 @@ button {
 }
 
 .wrap {
+  
   display: flex;
   justify-content: center;
-  background-color:white;
-  align-self: center;
-  height:70%;
-  width:70%;
-  margin-inline:auto;
+  align-items: center;
+  height: 100%;
+  margin-top: 70px;
 }
 
 .column-1 {
-  width: 75%;
-  margin: 3rem;
-  display: flex;
-  align-items: center;
+  max-width: 400px;
   color:#1d2634;
+  background-color: white;
+  padding: 20px;
 }
 
 .main-login {
