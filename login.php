@@ -9,22 +9,24 @@ include("./helpers/FLUSH.php");
 <head>
     <title>Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php include(__DIR__ . '/layout/header-link.php') ?>
     <link rel='stylesheet' href='/gwsc/asset/css/login-user.css' />
     <link rel='stylesheet' href='/gwsc/asset/css/common.css' />
 </head>
 
 <body class="text-center">
+    <?php include(__DIR__ . '/layout/navbar.php') ?>
     <div class="wrap">
         <div class='column-1'>
             <div class='main-login'>
                 <h1 class="h3 mb-3">
                     <div class='banner'>
-                        <img src="/gwsc/asset/images/loginPicture.jpg" class="banner"/>
+                        <img src="/gwsc/asset/images/logo.png" class="banner"/>
                     </div>
                     Login
                 </h1>
                 <?php if (FLUSH::check('error')): ?>
-                    <div class="alert alert-warning">
+                    <div class="alert alert-danger">
                         <?= FLUSH::message('error') ?>
                     </div>
                 <?php endif; ?>
@@ -38,7 +40,7 @@ include("./helpers/FLUSH.php");
                     </button>
                 </form>
                 <br>
-                <a href="register.php">Register</a>
+                <div style="text-align: center;">Don't have an account yet? <a href="register.php">Register</a></div>
             </div>
         </div>
 

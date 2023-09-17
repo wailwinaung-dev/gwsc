@@ -1,7 +1,6 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #1d2634;
     color: #9e9ea4;
     font-family: 'Montserrat', sans-serif;
 }
@@ -54,7 +53,7 @@ button {
 }
 
 .column-1{
-  width:50%;
+  max-width: 400px;
   padding:1.5rem;
   border-radius:.95%;
   display:flex;
@@ -95,4 +94,15 @@ background-repeat: no-repeat;
   .column-1{
     width:100%;
   }
+}
+
+.alert {
+  border-radius: 6px;
+  padding: 20px;
+  margin: 10px 0;
+}
+
+.alert-danger{
+  color: red;
+  border: 1px solid red;
 }
