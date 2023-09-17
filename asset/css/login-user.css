@@ -1,7 +1,6 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #666;
     color: #9e9ea4;
     font-family: 'Montserrat', sans-serif;
 }
@@ -34,7 +33,7 @@ button {
 
 .h3{
   text-align: center;
-  margin:1.5rem;
+
 }
 
 .container {
@@ -49,8 +48,7 @@ button {
   display:flex;
   justify-content:center;
   align-items:center;
-  height:100svh;
-  
+  height: 100%;
 }
 
 .column-1{
@@ -82,7 +80,7 @@ background-repeat: no-repeat;
 
 
 .banner{
-  width:40%;
+  width:50%;
   object-fit:cover;
   object-position:center;
   display:auto;
@@ -94,9 +92,6 @@ background-repeat: no-repeat;
 @media screen and (max-width : 600px) {
   .column-1{
     width:100%;
-  }
-  .banner{
-    width:75%;
   }
 }
 

@@ -1,7 +1,6 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #666;
   color: #9e9ea4;
   font-family: 'Montserrat', sans-serif;
 }
@@ -48,7 +47,7 @@ button {
 
 .h3 {
   text-align: center;
-  margin-bottom:7px;
+  margin: 0;
 }
 
 .container {
@@ -59,21 +58,20 @@ button {
 }
 
 .wrap {
+  
   display: flex;
   justify-content: center;
-  background-color:white;
-  align-self: center;
-  height:70%;
-  width:70%;
-  margin-inline:auto;
+  align-items: center;
+  height: 100%;
+  margin-top: 70px;
+  margin-bottom: 20px;
 }
 
 .column-1 {
-  width: 75%;
-  margin: 3rem;
-  display: flex;
-  align-items: center;
+  max-width: 400px;
   color:#1d2634;
+  background-color: white;
+  padding: 20px;
 }
 
 .main-login {
@@ -104,7 +102,7 @@ button {
 }
 
 .banner{
-  width:40%;
+  width:50%;
   object-fit:cover;
   object-position:center;
   display:auto;
@@ -121,7 +119,5 @@ button {
   .wrap{
     width:100%;
   }
-  .banner{
-    width:75%;
-  }
+
 }

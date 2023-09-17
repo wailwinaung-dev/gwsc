@@ -9,10 +9,12 @@ include("./helpers/FLUSH.php");
 <head>
     <title>Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php include(__DIR__ . '/layout/header-link.php') ?>
     <link rel='stylesheet' href='/gwsc/asset/css/register-user.css' />
 </head>
 
 <body class="text-center">
+    <?php include(__DIR__ . '/layout/navbar.php') ?>
     <div class="wrap">
         <div class='column-1'>
             <div class='main-login'>
@@ -45,7 +47,7 @@ include("./helpers/FLUSH.php");
                     </button>
                 </form>
                 <br>
-                <a href="register.php">Login</a>
+                <div style="text-align: center;">Already have an account? <a href="login.php">Login</a></div>
             </div>
         </div>
     </div>
