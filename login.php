@@ -19,7 +19,7 @@ include("./helpers/FLUSH.php");
             <div class='main-login'>
                 <h1 class="h3 mb-3">
                     <div class='banner'>
-                        <img src="/gwsc/asset/images/loginPicture.jpg" class="banner"/>
+                        <img src="/gwsc/asset/images/logo.png" class="banner"/>
                     </div>
                     Login
                 </h1>
