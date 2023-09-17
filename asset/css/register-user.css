@@ -47,7 +47,7 @@ button {
 
 .h3 {
   text-align: center;
-  margin-bottom:7px;
+  margin: 0;
 }
 
 .container {
@@ -64,6 +64,7 @@ button {
   align-items: center;
   height: 100%;
   margin-top: 70px;
+  margin-bottom: 20px;
 }
 
 .column-1 {
@@ -101,7 +102,7 @@ button {
 }
 
 .banner{
-  width:40%;
+  width:50%;
   object-fit:cover;
   object-position:center;
   display:auto;
@@ -115,4 +116,8 @@ button {
   .column-1{
     width:100%;
   }
+  .wrap{
+    width:100%;
+  }
+
 }

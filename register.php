@@ -20,7 +20,7 @@ include("./helpers/FLUSH.php");
             <div class='main-login'>
                 <h1 class="h3 mb-3">
                     <div class='banner'>
-                        <img src="/gwsc/asset/images/loginPicture.jpg" class="banner" />
+                        <img src="/gwsc/asset/images/logo.png" class="banner" />
                     </div>
                     Register
                 </h1>
@@ -47,7 +47,7 @@ include("./helpers/FLUSH.php");
                     </button>
                 </form>
                 <br>
-                <a href="register.php">Login</a>
+                <div style="text-align: center;">Already have an account? <a href="login.php">Login</a></div>
             </div>
         </div>
     </div>
