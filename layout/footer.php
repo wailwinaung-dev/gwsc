@@ -30,5 +30,13 @@
             <a href="#" target="_blank"><i class="fa fa-instagram"></i> Instagram</a>
         </div>
     </div>
-    <p class="copyright">&copy; 2023 GWSC. All rights reserved.</p>
+    <p class="copyright">You are in <span id="location"></span> page. <br />&copy; 2023 GWSC. All rights reserved.</p>
 </footer>
+
+
+<script>
+    let i=window.location.href.split('.php')[0];
+    let page=i.split('/');
+    page=page[page.length-1];
+    document.getElementById("location").innerText=page;
+</script>
