@@ -1,4 +1,4 @@
-<!-- <?php
+<?php
 // include("./helpers/AUTH.php");
 include __DIR__ . '/database/model/ReviewsTable.php';
 include(__DIR__ . '/database/model/PackagesTable.php');
@@ -8,16 +8,12 @@ $packages = $packagesTable->getFive();
 
 $reviewsTable = new ReviewsTable();
 $reviews = $reviewsTable->getByRating(5);
-var_dump($reviews);
+// var_dump($reviews);
 
 // exit;
 // $auth = Auth::check();
 // var_dump($auth);
 ?>
-
-<h1>This is HomePage.</h1>
-<a href="actions/logout.php"
-class="text-danger">Logout</a> -->
 
 
 <!DOCTYPE html>

@@ -66,8 +66,7 @@ class ReviewsTable extends MySQL
             FROM reviews 
             LEFT JOIN packages ON packages.id = reviews.package_id
             LEFT JOIN customers ON customers.id = reviews.customer_id
-            WHERE rating = 5
-            ORDER BY id DESC
+            ORDER BY id ASC
             LIMIT  ". $limit;
 
             $result = $this->db->query($query);
