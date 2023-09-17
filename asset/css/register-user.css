@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #1d2634;
+  background-color: #666;
   color: #9e9ea4;
   font-family: 'Montserrat', sans-serif;
 }
@@ -117,5 +117,11 @@ button {
 @media screen and (max-width : 600px) {
   .column-1{
     width:100%;
+  }
+  .wrap{
+    width:100%;
+  }
+  .banner{
+    width:75%;
   }
 }
