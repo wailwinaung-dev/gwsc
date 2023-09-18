@@ -1,254 +1,204 @@
-.slideshow-container-intro {
-    max-width: 1000px;
-    position: relative;
-    margin: auto;
-}
-.main-container {
-    width: 75%;
-    display: block;
-    margin-inline: auto;
-    margin-top:65px;
+html,
+body {
+    height: 100%;
 }
 
-/* Slideshow container */
-.slideshow-container {
-    max-width: 1400px;
-    width: 100%;
-    position: relative;
-    background-color: #666;
-    margin: auto;
-    margin-inline: 16px;
+/* Styling for the banner */
+.banner {
+    background-image: url('../images/bg-hero.jpg');
+    /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
 }
 
-/* Hide the images by default */
-.mySlides {
-    display: none;
-}
-.mySlides2 {
-    display: none;
+.banner-text {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5px 0px;
+    margin: 10px 30px
 }
 
-/* Next & previous buttons */
-.prev,
-.next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: grey;
-    font-weight: bold;
+/* Styling for the banner title */
+.banner-text h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Styling for the banner description */
+.banner-text p {
     font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
+    margin-bottom: 30px;
 }
 
-/* Position the "next button" to the right */
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-}
-
-/* Caption text */
-.text {
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-
-.active,
-.dot:hover {
-    background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-@keyframes fade {
-    from {
-        opacity: .4
-    }
-
-    to {
-        opacity: 1
-    }
-}
-
-.slidecard-container {
-    width: 100%;
-    display: block;
-    margin-inline: auto;
-}
-
-/* Basic styling for the card */
-.review-card {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 16px;
-    width: 100%;
-    /* Take up the available space in the column */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    background-color: #fff;
+/* Styling for the search box container */
+.search-container {
     display: flex;
-    align-items: start;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
 }
 
-/* Style for the package image */
-.review-card img {
-    width: 250px;
-    max-width: 100%;
-    text-align: center;
-    display: block;
-    height: auto;
-    margin-inline: auto;
-    margin-block: .75rem;
-    border-radius: 50%;
-    object-position: center;
+/* Styling for the search box */
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: #f2f2f2;
+    border-radius: 25px;
+    padding: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.review-card div {
-    width: 70%;
-    margin: 10px;
-    text-align: center;
-}
-
-/* Style for the package name */
-.review-card div h2 {
-    font-size: 1.5rem;
-    margin: 10px 0;
-    text-align: center;
-}
-
-/* Style for the package description */
-.review-card p {
-    font-size: 1rem;
-    color: #666;
-    text-align: center;
-}
-
+/* Styling for the search input */
 .search-input {
-    width: 70%;
+    border: none;
+    background-color: transparent;
+    font-size: 18px;
+    width: 250px;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
+    outline: none;
 }
 
+/* Styling for the search button */
 .search-button {
-    padding: 10px 20px;
     background-color: #007BFF;
     color: #fff;
     border: none;
-    border-radius: 4px;
+    border-radius: 25px;
+    padding: 10px 20px;
     cursor: pointer;
-    font-size: 16px;
 }
 
-.center {
-    display: block;
-    margin-inline: auto;
-    width: 50%;
+/* Hover effect for the search button */
+.search-button:hover {
+    background-color: #0056b3;
 }
 
-.search-card {
-    margin: 16px;
-    padding: 2px;
-    padding-block: 1rem;
-    background-color: white;
-    border-radius: 0.5rem;
-    width: 100%;
+/* Our Pitch Types  */
+.pitch-type,
+.package, .review {
+    padding: 20px 0px;
+    color: #666;
 }
 
-.intro-title {
+.pitch-type h4, .review h4
+{
     text-align: center;
-    margin: 2rem;
+    font-size: 3rem;
+    margin: 10px
 }
 
-
-.pitch-list {
-    list-style-type: none;
-    padding: 0;
+.row-gap-5 {
+    row-gap: 3rem !important;
 }
 
-.pitch-item {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-bottom: 10px;
+.mt-5 {
+    margin-top: 3rem !important;
+}
+
+.row {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+    align-items: center;
+    justify-content: space-around;
 }
 
-.pitch-item img {
-    width: 50%;
-    height: auto;
+.row .col svg {
+    height: 100px;
 }
 
+.text-danger {
+    color: red
+}
 
-@media screen and (max-width : 650px) {
-    .search-input {
-        width: 55%;
-        margin-inline: .2rem
+.text-warning {
+    color: rgb(151, 122, 9)
+}
+
+.text-success {
+    color: rgb(9, 136, 33)
+}
+
+/* Our Packages  */
+.package{
+    background-color: white;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    border-radius: 5px;
+    text-align: center;
+    font-family: arial;
+    margin: 10px 0px;
+}
+
+.price {
+    color: grey;
+    font-size: 22px;
+}
+
+.card-content{
+    padding: 10px;
+}
+
+.card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #0056b3;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.card button:hover {
+    opacity: 0.7;
+}
+
+/* Review */
+.reviewer-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    background-color: white;
+}
+
+/* Styling for the reviewer's name */
+.reviewer-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Styling for the review text */
+.review-text {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Styling for the rating */
+.rating {
+    color: #FFD700; /* Golden yellow color for stars */
+}
+
+/* Media query for mobile screens */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
     }
 
-    .search-button {
-        width: 40%;
+    .pitch-type h4, .review h4 {
+        font-size: 2rem;
     }
-
-    .center {
-        width: 100%;
-        padding: 16px;
-    }
-
-    .main-container {
-        width: 100%;
-        margin: 0;
-    }
-    .slidecard-container{
-        margin:auto;
-        display:block;
-    }
-    .slideshow-container{
-       margin:0;
-    }
-
 }
