@@ -1,18 +1,15 @@
 <?php
-// include("./helpers/AUTH.php");
-include __DIR__ . '/database/model/ReviewsTable.php';
-include(__DIR__ . '/database/model/PackagesTable.php');
-
+include_once(__DIR__ . '/database/model/ReviewsTable.php');
+include_once(__DIR__ . '/database/model/PackagesTable.php');
+include_once(__DIR__ . '/database/model/FeaturesTable.php');
 $packagesTable = new PackagesTable();
 $packages = $packagesTable->getFive();
 
 $reviewsTable = new ReviewsTable();
 $reviews = $reviewsTable->getByRating(5);
-// var_dump($reviews);
 
-// exit;
-// $auth = Auth::check();
-// var_dump($auth);
+$featuresTable = new FeaturesTable();
+$features = $featuresTable->getAll();
 ?>
 
 
@@ -99,7 +96,7 @@ $reviews = $reviewsTable->getByRating(5);
     </div>
 
     <div class="review">
-        <h4>Reviews</h4>
+        <h4>Customer Reviews</h4>
         <div class="row">
             <div class="reviewer-card">
                 <div class="reviewer-name"><i class="fa fa-user-circle-o"></i> John Doe</div>
@@ -125,7 +122,71 @@ $reviews = $reviewsTable->getByRating(5);
         </div>
     </div>
 
+    <div class="feature">
+        <h4>Our Features</h4>
+        <div class="slideshow-container">
+
+            <?php foreach ($features as $key => $feature) : ?>
+                <div class="mySlides fade">
+                    <div class="numbertext"><?= $key + 1 ?> / <?= count($features) ?></div>
+                    <img src="./actions/photos/features/<?= $feature['image'] ?>">
+                    <div class="text">
+                        <h5><?= $feature['name'] ?></h5>
+                        <p><?= $feature['description'] ?></p>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <?php foreach ($features as $key => $feature) : ?>
+                <span class="dot" onclick="currentSlide(<?= $key + 1 ?>)"></span>
+                <!-- <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span> -->
+            <?php endforeach; ?>
+        </div>
+    </div>
+
     <?php include "./layout/footer.php" ?>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "flex";
+            slides[slideIndex - 1].className += " slide-show";
+
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
 </body>
 
 </html>
