@@ -1,27 +1,14 @@
 Admin.....
-## dashboard view ✅
-## if no data in index, show "No Data" text ✅
-## index for contact ✅
-## if change input file, photo change in edit page (js) ✅
-## change iframe link <optional> ✅
-## toggle status of booking by admin ✅
+## need to fixed responsive
+## add 404 page
 
 
 Customer.....
-Login <almost done>
-Register <almost done>
-Home Page
-Information Page ✅
-PitchType and availability page ✅
-Package Detail ✅
-add Booking
-review ✅
-add Review
-Features Page
-Contact Page 
-Local Attraction
-profile page
-booking list <login customer>
+## add Booking
+## booking list <login customer>
+## change card design in features page 
+## change link to iframe in local attraction page 
+## menu responsive
 
 Database.....
-need to change (varchar) to (text) in review
+## need to change (varchar) to (text) in review
