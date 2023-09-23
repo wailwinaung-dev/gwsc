@@ -1,11 +1,10 @@
 Admin.....
 ## need to fixed responsive
 ## add 404 page
-
+## fixed contact name and email
 
 Customer.....
-## booking list <login customer>
-## menu responsive
+
 
 Database.....
 ## need to change (varchar) to (text) in review

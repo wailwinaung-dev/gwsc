@@ -41,7 +41,7 @@ class ContactsTable extends MySQL
     {
         try {
             $query = " INSERT ";
-            $query .= " INTO contacts(email,first_name,last_name,message,created_at,updated_at) VALUES( ";
+            $query .= " INTO contacts(first_name,last_name,email,message,created_at,updated_at) VALUES( ";
             $query .= " ? ,";
             $query .= " ? ,";
             $query .= " ? ,";

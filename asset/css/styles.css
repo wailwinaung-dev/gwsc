@@ -10,6 +10,9 @@
   --secondary: #6c6056;
 }
 
+*{
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   padding: 0;
@@ -123,7 +126,8 @@ body {
 
 .main-cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+  grid-template-columns: repeat(auto-fill, 23%);
   gap: 20px;
   margin: 20px 0;
 }
@@ -355,6 +359,13 @@ input[type=number] {
 
   .form-container {
     width: 100%;
+  }
+
+  .row{
+    flex-direction: column;
+  }
+  .left, .right{
+    width: 100%!important;
   }
 }
 
