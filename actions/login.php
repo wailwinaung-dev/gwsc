@@ -34,6 +34,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $password = $_POST['password'];
         $table = new CustomersTable();
         $customer = $table->findByEmailAndPasword($email, $password);
+        $customer['view_count'] =  $customer['view_count'] + 1;
+
+        //increate view count
+        $table->increaseViewCount($customer['id'], $customer['view_count']);
 
         if ($customer) {
             $_SESSION['customer'] = $customer;

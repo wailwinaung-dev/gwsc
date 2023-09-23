@@ -32,7 +32,7 @@
     </div>
 
     <marquee>
-        Visitor Count: 1843
+        <?= isset($_SESSION['customer']) ? "You are visited ". $_SESSION['customer']['view_count'] . " time" : '' ?>
         <span> • </span>
         You are in <span id="location"></span> page.
     </marquee>

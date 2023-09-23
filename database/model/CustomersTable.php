@@ -135,4 +135,21 @@ class CustomersTable extends MySQL
             throw new Exception($e->getMessage());
         }
     }
+
+    public function increaseViewCount($id, $count)
+    {
+        $sql = "UPDATE customers
+            SET view_count = ?
+            WHERE id = ?";
+
+        // Prepare and execute the query
+        $stmt = $this->db->prepare($sql);
+        $stmt->bind_param(
+            "ii",
+            $count,
+            $id
+        );
+
+        $stmt->execute();
+    }
 }
