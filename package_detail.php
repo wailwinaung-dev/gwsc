@@ -95,7 +95,9 @@ $features = json_decode($package['features']);
                             </span>
                         </div>
                     </div>
-                    <button type="submit" id="submit">Submit Booking</button>
+                    <?php if(isset($_SESSION['customer'])): ?>
+                        <button type="submit" id="submit">Submit Booking</button>
+                    <?php endif; ?>
                 </form>
             </div>
         </div>

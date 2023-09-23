@@ -6,7 +6,7 @@ include("../helpers/HTTP.php");
 include("../helpers/FLUSH.php");
 
 $booking = new BookingsTable();
-$_POST['subtotal'] = $_POST['price'] + (($_POST['price'] * 10) / 100);
+$_POST['subtotal'] = ($_POST['price'] * $_POST['qty']) + (($_POST['price'] * $_POST['qty'] * 10) / 100);
 $booking->insert($_POST);
 
 FLUSH::message('success', 'Your booking added sucessfully.');
