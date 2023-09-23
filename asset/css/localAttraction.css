@@ -1,3 +1,23 @@
+
+.hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/localAttraction_header.svg");
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+
 .main-container {
     color: #666;
     /* padding-top: 70px; */
@@ -21,16 +41,14 @@
     margin-block:.5rem;
 }
 
-.card img{
-    width:18%;
-    display:block;
-    margin:auto;
-    padding:0.8rem;
+.card img, .card article, .card iframe{
+    width:30%;
 }
 
-.card article{
+
+/* .card article{
     width:70%;
-}
+} */
 
 @media screen and (max-width:650px) {
     .main-container{
@@ -38,9 +56,14 @@
         padding:14px;
     }
     .card {
-        display:block;
+        flex-direction: column;
     }
-    .card img{
+    .card img, .card article{
         width:100%;
+    }
+    .card iframe {
+        width: 100%;
+        height: 200px; /* Adjust the height as needed */
+        border: none;
     }
 }
