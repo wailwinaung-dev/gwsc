@@ -12,6 +12,7 @@ include("./helpers/FLUSH.php");
     <?php include(__DIR__ . '/layout/header-link.php') ?>
     <link rel='stylesheet' href='/gwsc/asset/css/login-user.css' />
     <link rel='stylesheet' href='/gwsc/asset/css/common.css' />
+    <script src='https://www.google.com/recaptcha/api.js' async defer></script>
 </head>
 
 <body class="text-center">
@@ -21,20 +22,22 @@ include("./helpers/FLUSH.php");
             <div class='main-login'>
                 <h1 class="h3 mb-3">
                     <div class='banner'>
-                        <img src="/gwsc/asset/images/logo.png" class="banner"/>
+                        <img src="/gwsc/asset/images/logo.png" class="banner" />
                     </div>
                     Login
                 </h1>
-                <?php if (FLUSH::check('error')): ?>
+                <?php if (FLUSH::check('error')) : ?>
                     <div class="alert alert-danger">
                         <?= FLUSH::message('error') ?>
                     </div>
                 <?php endif; ?>
-                <form action="actions/login.php" method="post">
+                <form action="actions/login.php" method="post" id="login-form">
                     <label class='label'>Email</label>
                     <input type="email" name="email" class="control mb-2" placeholder="Email" required>
                     <label class='label'>Password</label>
                     <input type="password" name="password" class="control mb-2" placeholder="Password" required>
+                    <div id="recaptcha" class="g-recaptcha" data-sitekey="6LcsbkgoAAAAAJ3FTsnTAbRWS9alde_tJ1yHHAbG" data-size="100%"></div>
+                    <br />
                     <button type="submit" class="w-100 btn btn-lg btn-primary">
                         Login
                     </button>
@@ -45,6 +48,7 @@ include("./helpers/FLUSH.php");
         </div>
 
     </div>
+
 </body>
 
 </html>
