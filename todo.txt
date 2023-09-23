@@ -1,14 +1,11 @@
 Admin.....
 ## need to fixed responsive
 ## add 404 page
-
+## fixed contact name and email
 
 Customer.....
-## add Booking
-## booking list <login customer>
-## change card design in features page 
-## change link to iframe in local attraction page 
-## menu responsive
+
 
 Database.....
 ## need to change (varchar) to (text) in review
+## tax to default 10% and payment_method is null in booking

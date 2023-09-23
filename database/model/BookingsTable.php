@@ -56,4 +56,32 @@ class BookingsTable extends MySQL
         }
     }
 
+    public function insert($data){
+        try {
+            // var_dump($data);exit;
+
+            $sql = "INSERT INTO bookings (
+                customer_id, package_id, qty, price, subtotal, booking_date, created_at, updated_at
+            ) VALUES (
+                ?,?,?,?,?,?,NOW(), NOW()
+            )"; // sql
+
+            $stmt = $this->db->prepare($sql); // prepare
+            $stmt->bind_param(
+                "iiiiis",
+                $_SESSION['customer']['id'],
+                $data['package_id'],
+                $data['qty'],
+                $data['price'],
+                $data['subtotal'],
+                $data['booking_date']
+            );
+            $stmt->execute(); // execute with data! 
+
+            return $this->db->insert_id;
+        } catch (PDOException $e) {
+            return $e->getMessage()();
+        }
+    }
+
 }

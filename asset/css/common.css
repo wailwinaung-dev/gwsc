@@ -8,7 +8,7 @@ html {
     margin: 0;
 }
 
-.hero-image {
+/* .hero-image {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/information_header.jpg");
     height: 50%;
     background-position: bottom;
@@ -24,7 +24,7 @@ html {
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-}
+} */
 
 
 /* .container{
@@ -35,7 +35,7 @@ html {
 } */
 
 
-.hero-image {
+/* .hero-image {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/availability_header.jpg");
     height: 50%;
     background-position: bottom;
@@ -51,7 +51,7 @@ html {
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-}
+} */
 
 .control {
     -moz-appearance: none;

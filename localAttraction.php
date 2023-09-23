@@ -1,8 +1,8 @@
 <?php
-    include __DIR__ . '/database/model/AttractionsTable.php';
-    $table=new AttractionsTable();
+include __DIR__ . '/database/model/AttractionsTable.php';
+$table = new AttractionsTable();
 
-    $variable=$table->getAll();
+$variable = $table->getAll();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,21 +24,18 @@
         </div>
     </div>
     <div class="main-container">
-        <div class="">
-            <div class="">
-            <?php foreach($variable as $local) :?>
-                <div class="card">
-                    <img src=<?= "./actions/photos/attractions/".$local['image'] ?> />
-                    <article class="">
-                        <h2><?= $local['name'] ?></h2>
-                        <p><?= $local["location"] ?></p>
-                        <p><?= $local["description"] ?></p>
-                    </article>
 
-                </div>
-                <?php endforeach ?>
+        <?php foreach ($variable as $local) : ?>
+            <div class="card">
+                <img src=<?= "./actions/photos/attractions/" . $local['image'] ?> />
+                <article>
+                    <h2><?= $local['name'] ?></h2>
+                    <p><?= $local["description"] ?></p>
+                </article>
+                <iframe src="<?= $local["location"] ?>" title=""></iframe>
             </div>
-        </div>
+        <?php endforeach ?>
+
     </div>
     <?php include(__DIR__ . '/layout/footer.php') ?>
 </body>

@@ -10,7 +10,7 @@
 
 <ul class="sidebar-list">
     <li class="sidebar-list-item">
-    <a href="/gwsc/admin/dashboard.php">
+    <a href="/gwsc/admin">
         <span class="material-icons-outlined">dashboard</span> Dashboard
     </a>
     </li>

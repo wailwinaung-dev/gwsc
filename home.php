@@ -151,6 +151,11 @@ $features = $featuresTable->getAll();
         </div>
     </div>
 
+
+    <div class="youtube-container">
+        <iframe src="https://www.youtube.com/embed/Z-ZcQkJxgv8?si=twDk-ZyTh5sp9gLo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+
     <?php include "./layout/footer.php" ?>
 
     <script>

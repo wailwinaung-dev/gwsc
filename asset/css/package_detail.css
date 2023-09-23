@@ -16,22 +16,6 @@
 }
 
 
-.btn {
-    display: inline-block;
-    border: none;
-    color: white;
-    padding: 10px 15px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.btn-success {
-    background-color: var(--success);
-}
-
-
 .iframe-container {
     position: relative;
     overflow: hidden;
@@ -57,28 +41,91 @@ iframe {
     display: flex;
 }
 
-.left,
-.right {
+.row .content-container,
+.row .reserve-container{
     padding: 15px;
-    width: 50%;
+    width: 30%;
 }
 
-.container {
-    position: relative;
-    max-width: 800px;
-    margin: 0 auto;
+.row .reserve-container{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.row .img-container {
+    padding: 15px;
+    width: 40%;
+}
+
+
+.booking-form {
+    border-radius: 10px;
+    background-color: rgb(225, 222, 222);
+}
+
+.booking-form h2{
+    margin: 0;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="date"],
+input[type="number"]{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+}
+
+button[type="submit"]:hover {
+    background-color: #555;
+}
+
+.result div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+/* .result .tax{
+    text-align: end;
+} */
+
+.result .total-price{
+    font-size: 20px;
+}
+
+.alert {
+    border-radius: 6px;
+    padding: 20px;
+    margin: 10px 0;
   }
   
-  .container img {vertical-align: middle;}
-  
-  .container .content {
-    position: absolute;
-    bottom: 0;
-    background: rgb(0, 0, 0); /* Fallback color */
-    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
-    color: #f1f1f1;
-    width: 100%;
-    padding: 20px;
+  .alert-success{
+    color: green;
+    border: 1px solid green;
   }
 
 
@@ -94,30 +141,31 @@ iframe {
 
     .row {
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
-    .row .left,
-    .row .right {
+    .row .img-container,
+    .row .content-container,
+    .row .reserve-container {
         padding: 0;
         width: 100%;
     }
 
-    .row .right{
+    .row .content-container,
+    .row .reserve-container {
         padding: 15px;
     }
 
-    img{
+    .booking-form h2{
+        margin: 10px 0;
+    }
+
+    img {
         width: 100%;
     }
 
-    .iframe-container{
+    .iframe-container {
         margin: 0;
-    }
-
-    .btn{
-
-        margin-left: 20px;
-        margin-bottom: 20px;
-        padding: 20px 30px
     }
 }
