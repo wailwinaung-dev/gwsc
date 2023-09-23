@@ -12,7 +12,3 @@ Customer.....
 Database.....
 ## need to change (varchar) to (text) in review
 ## tax to default 10% and payment_method is null in booking
-
-6LdvVEgoAAAAAHgul5ZJx54NsKuijxEKXOMSS5xh
-
-6LdvVEgoAAAAAGi291Fz3VPIBqT7QMVGBXVZXNlG
