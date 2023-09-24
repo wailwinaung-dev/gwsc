@@ -26,7 +26,7 @@ include("./helpers/FLUSH.php");
                     </div>
                     Login
                 </h1>
-                <?php if (FLUSH::check('error')) : ?>
+                <?php if (FLUSH::check('error')): ?>
                     <div class="alert alert-danger">
                         <?= FLUSH::message('error') ?>
                     </div>
@@ -36,7 +36,8 @@ include("./helpers/FLUSH.php");
                     <input type="email" name="email" class="control mb-2" placeholder="Email" required>
                     <label class='label'>Password</label>
                     <input type="password" name="password" class="control mb-2" placeholder="Password" required>
-                    <div id="recaptcha" class="g-recaptcha" data-sitekey="6LcsbkgoAAAAAJ3FTsnTAbRWS9alde_tJ1yHHAbG" data-size="100%"></div>
+                    <div id="recaptcha" class="g-recaptcha" data-sitekey="6LcsbkgoAAAAAJ3FTsnTAbRWS9alde_tJ1yHHAbG"
+                        data-size="100%"></div>
                     <br />
                     <button type="submit" class="w-100 btn btn-lg btn-primary">
                         Login
@@ -46,9 +47,13 @@ include("./helpers/FLUSH.php");
                 <div style="text-align: center;">Don't have an account yet? <a href="register.php">Register</a></div>
             </div>
         </div>
-
     </div>
 
+    <script>
+        <?php if(isset($_SESSION['PMT_MSG'])) : ?>
+            window.alert("<?= $_SESSION["PMT_MSG"] ?>");
+        <?php endif ?>
+    </script>
 </body>
 
 </html>
