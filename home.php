@@ -104,13 +104,13 @@ $features = $featuresTable->getAll();
                         <p class="price">$
                             <?= $package['price'] ?>
                         </p>
-                        <?php if (strlen($package['description']) <= 60): ?>
+                        <?php if (strlen($package['description']) <= 100): ?>
                             <p>
-                                <?= substr($package['description'], 0, 60) ?>
+                                <?= substr($package['description'], 0, 100) ?>
                             </p>
                         <?php else: ?>
                             <p>
-                                <?= substr($package['description'], 0, 60) . "..." ?>
+                                <?= substr($package['description'], 0, 100) . "..." ?>
                             </p>
                         <?php endif ?>
                         <p><button>Discover More <i class="fa fa-angle-double-right" aria-hidden="true"></i></button></p>

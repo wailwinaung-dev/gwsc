@@ -28,34 +28,55 @@ $packages = $packagesTable->getAll();
     <!-- Container for the grid of campsite packages -->
     <div class="card-container">
         <!-- Loop through your array of campsite packages -->
-        <?php foreach ($packages as $package) : ?>
+        <?php foreach ($packages as $package): ?>
             <div class="card">
-                <img src="./actions/photos/packages/<?php echo $package['image']; ?>" alt="<?php echo $package['name']; ?>">
+                <img src="./actions/photos/packages/<?php echo $package['image']; ?>" alt="<?php echo $package['name']; ?>" style="max-height:250px;">
                 <!-- Embed the location iframe -->
                 <iframe class="location-iframe" src="<?php echo $package['location']; ?>"></iframe>
-                <h2><?php echo $package['name']; ?></h2>
-                <p><?php echo $package['description']; ?></p>
-                <p class="price">$<?php echo $package['price']; ?></p>
-                <p><strong>Campsite:</strong> <?php echo $package['campsite_name']; ?></p>
-                <p><strong>Pitch Type:</strong> <?php echo $package['pitch_type_name']; ?></p>
+                <h2>
+                    <?php echo $package['name']; ?>
+                </h2>
+                <?php if (strlen($package['description']) <= 100): ?>
+                    <p>
+                        <?= substr($package['description'], 0, 100) ?>
+                    </p>
+                <?php else: ?>
+                    <p>
+                        <?= substr($package['description'], 0, 100) . "..." ?>
+                    </p>
+                <?php endif ?>
+                <p class="price">$
+                    <?php echo $package['price']; ?>
+                </p>
+                <p><strong>Campsite:</strong>
+                    <?php echo $package['campsite_name']; ?>
+                </p>
+                <p><strong>Pitch Type:</strong>
+                    <?php echo $package['pitch_type_name']; ?>
+                </p>
 
                 <!-- Display features -->
                 <p><strong>Features:</strong>
-                |
-                <?php foreach (json_decode($package['features'], true) as $feature) : ?>
-                    <span class="features"><?php echo $feature['name']; ?></span> |
-                <?php endforeach; ?>
-                
+                    |
+                    <?php foreach (json_decode($package['features'], true) as $feature): ?>
+                        <span class="features">
+                            <?php echo $feature['name']; ?>
+                        </span> |
+                    <?php endforeach; ?>
+
                 </p>
                 <!-- Display attractions -->
                 <p><strong>Attractions:</strong>
-                |
-                <?php foreach (json_decode($package['attractions'], true) as $attraction) : ?>
-                   <span><?php echo $attraction['name']; ?></span> |
-                <?php endforeach; ?>
-                
+                    |
+                    <?php foreach (json_decode($package['attractions'], true) as $attraction): ?>
+                        <span>
+                            <?php echo $attraction['name']; ?>
+                        </span> |
+                    <?php endforeach; ?>
+
                 </p>
-                <a href="package_detail.php?id=<?= $package['id'] ?>" class="btn">View Detail <i class="fa fa-angle-double-right"></i></a>
+                <a href="package_detail.php?id=<?= $package['id'] ?>" class="btn">View Detail <i
+                        class="fa fa-angle-double-right"></i></a>
             </div>
         <?php endforeach; ?>
     </div>
