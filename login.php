@@ -48,7 +48,7 @@ include("./helpers/FLUSH.php");
             </div>
         </div>
     </div>
-
+    <?= $_SESSION["FDT"]["attempt"] ?>
     <script>
         <?php if(isset($_SESSION['PMT_MSG'])) : ?>
             window.alert("<?= $_SESSION["PMT_MSG"] ?>");

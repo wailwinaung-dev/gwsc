@@ -18,11 +18,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 if ($current < $dateTime) {
                     $locked = true;
                     $_SESSION["PMT_MSG"] = "You will lock for 10 minutes because you failed the userName and password three times.";
+                } else {
+                    $timeout = true;
+                    unset($_SESSION["PMT_MSG"]);
                 }
-            } else {
-                var_dump("locked not true");
-                $timeout = true;
-                $_SESSION["PMT_MSG"] = "";
             }
         }
     }
@@ -78,7 +77,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                         if ($timeout) {
                             $trials['attempt'] = 0;
                         }
-                        if($trials['$attempt']<=3)
+                        if ($trials['$attempt'] <= 3)
                             $trials['attempt']++;
                         if ($trials['attempt'] == 3) {
                             $temp = new DateTime();
@@ -97,7 +96,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             FLUSH::message('error', 'Please check the captcha form.');
             HTTP::redirect("/login.php");
         }
-    }else{
+    } else {
         HTTP::redirect("/login.php");
     }
 }
