@@ -1,11 +1,8 @@
 Admin.....
-## need to fixed responsive
 ## add 404 page
-## fixed contact name and email
 
 Customer.....
 
-
 Database.....
-## need to change (varchar) to (text) in review
-## tax to default 10% and payment_method is null in booking
+## need to change message field (varchar) to (text) in review table
+## tax field to default 10% and payment_method is null in booking table
