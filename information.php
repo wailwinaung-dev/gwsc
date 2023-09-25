@@ -30,7 +30,8 @@ $packages = $packagesTable->getAll();
         <!-- Loop through your array of campsite packages -->
         <?php foreach ($packages as $package): ?>
             <div class="card">
-                <img src="./actions/photos/packages/<?php echo $package['image']; ?>" alt="<?php echo $package['name']; ?>" style="max-height:250px;">
+                <img src="./actions/photos/packages/<?php echo $package['image']; ?>" alt="<?php echo $package['name']; ?>"
+                    style="max-height:250px;">
                 <!-- Embed the location iframe -->
                 <iframe class="location-iframe" src="<?php echo $package['location']; ?>"></iframe>
                 <h2>
@@ -58,21 +59,21 @@ $packages = $packagesTable->getAll();
                 <!-- Display features -->
                 <p><strong>Features:</strong>
                     |
-                    <?php foreach (json_decode($package['features'], true) as $feature): ?>
-                        <span class="features">
-                            <?php echo $feature['name']; ?>
-                        </span> |
-                    <?php endforeach; ?>
+                    <?php #foreach (json_decode($package['features'], true) as $feature): ?>
+                    <span class="features">
+                        <?= $package['features'] ?>
+                    </span> |
+                    <?php #endforeach; ?>
 
                 </p>
                 <!-- Display attractions -->
                 <p><strong>Attractions:</strong>
                     |
-                    <?php foreach (json_decode($package['attractions'], true) as $attraction): ?>
-                        <span>
-                            <?php echo $attraction['name']; ?>
-                        </span> |
-                    <?php endforeach; ?>
+                    <?php #foreach (json_decode($package['attractions'], true) as $attraction): ?>
+                    <span>
+                        <?= $package['attractions'] ?> |
+                    </span> |
+                    <?php #endforeach; ?>
 
                 </p>
                 <a href="package_detail.php?id=<?= $package['id'] ?>" class="btn">View Detail <i

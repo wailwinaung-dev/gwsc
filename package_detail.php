@@ -48,17 +48,17 @@ $features = json_decode($package['features']);
 
                 <p>
                     Features: <b class="text-primary"> |
-                        <?php foreach ($features as $key => $feature) : ?>
-                            <?= $feature->name ?> |
-                        <?php endforeach; ?>
+                        <?php # foreach ($features as $key => $feature) : ?>
+                            <?= $package['features'] ?> |
+                        <?php # endforeach; ?>
                     </b>
                 </p>
 
                 <p>
                     Local Attractions: <b class="text-primary"> |
-                        <?php foreach ($attractions as $key => $attraction) : ?>
-                            <?= $attraction->name ?> |
-                        <?php endforeach; ?>
+                        <?php # foreach ($attractions as $key => $attraction) : ?>
+                            <?= $package['attractions'] ?> |
+                        <?php #endforeach; ?>
                     </b>
                 </p>
 

@@ -125,7 +125,7 @@ $features = $featuresTable->getAll();
         <h4>Customer Reviews</h4>
         <div class="row">
             <div class="reviewer-card">
-                <div class="reviewer-name"><i class="fa fa-user-circle-o"></i> John Doe</div>
+                <div class="reviewer-name"><i class="fa fa-user-circle-o"></i> Mike Barber</div>
                 <div class="rating">★★★★☆</div>
                 <div class="review-text">
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, ante nec lacinia tincidunt."
@@ -139,7 +139,7 @@ $features = $featuresTable->getAll();
                 </div>
             </div>
             <div class="reviewer-card">
-                <div class="reviewer-name"><i class="fa fa-user-circle-o"></i> John Doe</div>
+                <div class="reviewer-name"><i class="fa fa-user-circle-o"></i> Oppa Gamnu</div>
                 <div class="rating">★★★★☆</div>
                 <div class="review-text">
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, ante nec lacinia tincidunt."

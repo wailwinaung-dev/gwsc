@@ -31,9 +31,9 @@ class PackagesTable extends MySQL
                 packages.*, 
                 pitch_types.name AS pitch_type_name,
                 campsites.name AS campsite_name,
-                concat('[', GROUP_CONCAT(DISTINCT JSON_OBJECT('id',features.id, 'name', features.name, 'description', features.description) ORDER BY features.id separator ','), ']') as features,
+                GROUP_CONCAT(DISTINCT features.name ORDER BY features.id separator '|') as features,
 
-                concat('[', GROUP_CONCAT(DISTINCT JSON_OBJECT('id',attractions.id, 'name', attractions.name, 'description', attractions.description) ORDER BY attractions.id separator ','), ']') as attractions
+                GROUP_CONCAT(DISTINCT  attractions.name ORDER BY attractions.id separator '|')as attractions
             FROM packages
                 LEFT JOIN package_feature ON packages.id = package_feature.package_id
                 LEFT JOIN features ON features.id = package_feature.feature_id
@@ -62,13 +62,16 @@ class PackagesTable extends MySQL
         try {
             $searchText = trim($searchText);
 
-            if(!$searchText){
+            if (!$searchText) {
                 return null;
             }
 
             $query = "SELECT packages.*, 
                 pitch_types.name AS pitch_type_name,
-                campsites.name AS campsite_name
+                campsites.name AS campsite_name,
+                GROUP_CONCAT(DISTINCT features.name ORDER BY features.id separator '|') as features,
+
+                GROUP_CONCAT(DISTINCT  attractions.name ORDER BY attractions.id separator '|')as attractions
             FROM packages
             LEFT JOIN pitch_types ON packages.pitch_type_id = pitch_types.id
             LEFT JOIN campsites ON packages.campsite_id = campsites.id
@@ -220,9 +223,9 @@ class PackagesTable extends MySQL
                 pitch_types.name AS pitch_type_name,
                 campsites.name AS campsite_name,
 
-                concat('[', GROUP_CONCAT(DISTINCT JSON_OBJECT('id',features.id, 'name', features.name, 'description', features.description) ORDER BY features.id separator ','), ']') as features,
+                GROUP_CONCAT(DISTINCT features.name ORDER BY features.id separator '|') as features,
 
-                concat('[', GROUP_CONCAT(DISTINCT JSON_OBJECT('id',attractions.id, 'name', attractions.name, 'description', attractions.description) ORDER BY attractions.id separator ','), ']') as attractions,
+                GROUP_CONCAT(DISTINCT  attractions.name ORDER BY attractions.id separator '|')as attractions,
 
                 GROUP_CONCAT(DISTINCT features.id) as feature_ids,
                 GROUP_CONCAT(DISTINCT attractions.id) as attraction_ids
@@ -270,9 +273,9 @@ class PackagesTable extends MySQL
                 packages.*, 
                 pitch_types.name AS pitch_type_name,
                 campsites.name AS campsite_name,
-                concat('[', GROUP_CONCAT(DISTINCT JSON_OBJECT('id',features.id, 'name', features.name, 'description', features.description) ORDER BY features.id separator ','), ']') as features,
+                GROUP_CONCAT(DISTINCT features.name ORDER BY features.id separator '|') as features,
 
-                concat('[', GROUP_CONCAT(DISTINCT JSON_OBJECT('id',attractions.id, 'name', attractions.name, 'description', attractions.description) ORDER BY attractions.id separator ','), ']') as attractions
+                GROUP_CONCAT(DISTINCT  attractions.name ORDER BY attractions.id separator '|')as attractions
             FROM packages
                 LEFT JOIN package_feature ON packages.id = package_feature.package_id
                 LEFT JOIN features ON features.id = package_feature.feature_id
