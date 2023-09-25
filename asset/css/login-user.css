@@ -32,6 +32,11 @@ button {
   width: 100%;
 }
 
+button:disabled{
+  background-color: grey;
+  cursor: not-allowed;
+}
+
 .h3 {
   text-align: center;
   margin: 0;

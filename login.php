@@ -31,6 +31,7 @@ include("./helpers/FLUSH.php");
                         <?= FLUSH::message('error') ?>
                     </div>
                 <?php endif; ?>
+
                 <form action="actions/login.php" method="post" id="login-form">
                     <label class='label'>Email</label>
                     <input type="email" name="email" class="control mb-2" placeholder="Email" required>
@@ -39,7 +40,7 @@ include("./helpers/FLUSH.php");
                     <div id="recaptcha" class="g-recaptcha" data-sitekey="6LcsbkgoAAAAAJ3FTsnTAbRWS9alde_tJ1yHHAbG"
                         data-size="100%"></div>
                     <br />
-                    <button type="submit" class="w-100 btn btn-lg btn-primary">
+                    <button type="submit" class="w-100 btn btn-lg btn-primary" id="submit">
                         Login
                     </button>
                 </form>
@@ -48,11 +49,32 @@ include("./helpers/FLUSH.php");
             </div>
         </div>
     </div>
-    <?= $_SESSION["FDT"]["attempt"] ?>
+    <div id="timer"></div>
+
     <script>
-        <?php if(isset($_SESSION['PMT_MSG'])) : ?>
-            window.alert("<?= $_SESSION["PMT_MSG"] ?>");
-        <?php endif ?>
+        let login_time = <?= isset($_SESSION['login_fail']['time']) ? $_SESSION['login_fail']['time'] * 1000 : 0 ?>;
+
+        function updateTimer() {
+            var now = new Date().getTime();
+            var timeout = login_time // Convert to milliseconds
+            var timeRemaining = timeout - now;
+            let submitBtn = document.getElementById('submit')
+            if (timeRemaining <= 0) {
+                submitBtn.innerHTML = "Submit";
+                submitBtn.disabled = false;
+                // You can also redirect the user to the login page here.
+            } else {
+                var minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+                submitBtn.innerHTML = "Log in failed 5 times. <b><i>" + minutes + "m " + seconds + "s<i></b>";
+                submitBtn.disabled = true;
+            }
+        }
+
+        // Update the timer every second
+        if(login_time){
+            setInterval(updateTimer, 1000);
+        }
     </script>
 </body>
 
