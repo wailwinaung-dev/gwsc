@@ -1,7 +1,6 @@
 <?php
+
 include_once(__DIR__ . '/../MySql.php');
-
-
 
 class BookingsTable extends MySQL
 {
@@ -39,6 +38,28 @@ class BookingsTable extends MySQL
             $result = $this->db->query($query);
             $data = $result->fetch_all(MYSQLI_ASSOC);
 
+            return $data;
+        } catch (Exception $e) {
+            throw new Exception($e->getMessage());
+        }
+    }
+
+    public function getByCustomer()
+    {
+        try {
+            $query = "SELECT 
+                b.*, 
+                CONCAT(c.first_name, ' ', c.sur_name) AS customer_name,
+                p.name AS package_name
+                
+            FROM bookings b
+                LEFT JOIN customers c ON c.id = b.customer_id
+                LEFT JOIN packages p ON p.id = b.package_id
+            WHERE b.customer_id = '" . $_SESSION['customer']['id'] . 
+            "'ORDER BY b.id DESC";
+
+            $result = $this->db->query($query);
+            $data = $result->fetch_all(MYSQLI_ASSOC);
             return $data;
         } catch (Exception $e) {
             throw new Exception($e->getMessage());

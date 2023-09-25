@@ -5,7 +5,7 @@ include_once(__DIR__ . '/database/model/BookingsTable.php');
 
 Auth::check();
 $bookingsTable = new BookingsTable();
-$bookings = $bookingsTable->getAll();
+$bookings = $bookingsTable->getByCustomer();
 
 ?>
 <!DOCTYPE html>
