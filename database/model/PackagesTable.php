@@ -68,11 +68,8 @@ class PackagesTable extends MySQL
 
             $query = "SELECT packages.*, 
                 pitch_types.name AS pitch_type_name,
-                campsites.name AS campsite_name,
-                GROUP_CONCAT(DISTINCT features.name ORDER BY features.id separator '|') as features,
-
-                GROUP_CONCAT(DISTINCT  attractions.name ORDER BY attractions.id separator '|')as attractions
-            FROM packages
+                campsites.name AS campsite_name
+                FROM packages
             LEFT JOIN pitch_types ON packages.pitch_type_id = pitch_types.id
             LEFT JOIN campsites ON packages.campsite_id = campsites.id
             WHERE packages.name LIKE '%$searchText%'";

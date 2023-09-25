@@ -72,7 +72,7 @@ $packages = $packagesTable->getAll();
                     <?php #foreach (json_decode($package['attractions'], true) as $attraction): ?>
                     <span>
                         <?= $package['attractions'] ?> |
-                    </span> |
+                    </span> 
                     <?php #endforeach; ?>
 
                 </p>
