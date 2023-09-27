@@ -28,6 +28,7 @@
             <a href="#" target="_blank"><i class="fa fa-facebook"></i> Facebook</a>
             <a href="#" target="_blank"><i class="fa fa-twitter"></i> Twitter</a>
             <a href="#" target="_blank"><i class="fa fa-instagram"></i> Instagram</a>
+            <a href="/gwsc/rss-producer.php" target="_blank"><i class="fa fa-rss"></i> Rss Feed</a>
         </div>
     </div>
 
