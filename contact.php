@@ -33,20 +33,24 @@ include('./helpers/FLUSH.php');
         <div class="name-container">
             <div class="first-name">
                 <label class="label">First Name</label>
-                <input type="text" name="first_name" class="control" placeholder="First Name" />
+                <input type="text" name="first_name" class="control" placeholder="First Name"  required/>
             </div>
             <div class="last-name">
                 <label class="label">Last Name</label>
-                <input type="text" name="last_name" class="control" placeholder="Last Name" />
+                <input type="text" name="last_name" class="control" placeholder="Last Name"  required/>
             </div>
         </div>
         <div class="">
             <label class="label">Email</label>
-            <input type="email" name="email" class="control" placeholder="Email" />
+            <input type="email" name="email" class="control" placeholder="Email"  required/>
         </div>
         <div class="">
             <label class="label">Message</label>
-            <textarea type="text" name="message" class="control" placeholder="Message"></textarea>
+            <textarea type="text" name="message" class="control" placeholder="Message" required></textarea>
+        </div>
+        <div>
+            <input type="checkbox" name="check" required/>
+            You accecpt <a href="/gwsc/privacy.php" alt="privacy" title="privacy">Privacy and Policy.</a>
         </div>
         <div class="">
             <button type="submit" class="button" value="register"> Submit </button>
