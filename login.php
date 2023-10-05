@@ -66,7 +66,7 @@ include("./helpers/FLUSH.php");
             } else {
                 var minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
                 var seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
-                submitBtn.innerHTML = "Log in failed 5 times. <b><i>" + minutes + "m " + seconds + "s<i></b>";
+                submitBtn.innerHTML = "Login failed 3 times. <b><i>" + minutes + "m " + seconds + "s<i></b>";
                 submitBtn.disabled = true;
             }
         }
