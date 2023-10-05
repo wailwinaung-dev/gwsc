@@ -9,6 +9,8 @@ include("./helpers/FLUSH.php");
 <head>
     <title>Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/gwsc/asset/css/login-user.css' />
+    <link rel='stylesheet' href='/gwsc/asset/css/common.css' />
     <?php include(__DIR__ . '/layout/header-link.php') ?>
     <link rel='stylesheet' href='/gwsc/asset/css/register-user.css' />
 </head>
@@ -25,7 +27,7 @@ include("./helpers/FLUSH.php");
                     Register
                 </h1>
                 <?php if (FLUSH::check('error')): ?>
-                    <div class="alert alert-warning">
+                    <div class="alert alert-danger">
                         <?= FLUSH::message('error') ?>
                     </div>
                 <?php endif; ?>
