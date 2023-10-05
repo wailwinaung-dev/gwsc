@@ -29,7 +29,7 @@ include("./helpers/FLUSH.php");
                         <?= FLUSH::message('error') ?>
                     </div>
                 <?php endif; ?>
-                <form action="actions/login.php" method="post">
+                <form action="actions/create_customer.php" method="post">
                     <label class='label'>First Name</label>
                     <input type="text" name="first_name" class="control mb-2" placeholder="First Name" required>
                     <label class='label'>Sur Name</label>
