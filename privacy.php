@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./asset/css/privacy.css">
     <title> GWSC - Privacy Policy </title>
 </head>
 
@@ -38,7 +39,7 @@
     <h3>
         3.1. Providing Services
     </h3>
-    <ul style="list-style-type:none">
+    <ul >
         <li>To process and manage your camping reservations</li>
         <li>To communicate with you about your bookings</li>
         <li>To provide customer support</li>
@@ -46,7 +47,7 @@
     <h3>
         3.2. Improving Services
     </h3>
-    <ul style="list-style-type:none">
+    <ul >
         <li>To analyze and improve our camping facilities and services</li>
         <li>To enhance user experience on our website and app</li>
         <li>To personalize your camping experience based on your preferences</li>
@@ -124,7 +125,7 @@
     </h2>
     <p>
         If you have any questions or concerns about this Privacy Policy, please contact us at:
-    <ul style="list-style-type:none;">
+    <ul >
         <li>
             Email : contact@gwsc.com
         </li>
