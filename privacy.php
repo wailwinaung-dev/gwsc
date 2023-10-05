@@ -9,7 +9,7 @@
 
 <body>
     <h2>
-        Introduction
+        1 . Introduction
     </h2>
     <p>
         Welcome to GWSC ("Global Wild Swimming and Camping"). This Privacy Policy outlines how we collect, use,
@@ -18,7 +18,7 @@
         the practices described in this Privacy Policy.
     </p>
     <h2>
-        Information We Collect
+        2. Information We Collect
     </h2>
     <p>
         We may collect both personal and non-personal information when you use our Website. Personal information may
@@ -31,23 +31,36 @@
     </ul>
     </p>
     <h2>
-        How We Use Your Information
+        3. How We Use Your Information
     </h2>
     <p>
-        We use the information collected for various purposes, including but not limited to:
-
-        Providing and maintaining the Website
-        Processing your requests and transactions
-        Sending updates, newsletters, and promotional materials
-        Responding to your inquiries and requests
-        Improving our services and Website
-        Complying with legal obligations
-        Cookies and Tracking Technologies
-        We may use cookies and similar tracking technologies to collect information about your browsing activity on our
-        Website. You can control the use of cookies through your browser settings.
+        We use the information we collect for various purposes, including:
+    <h3>
+        3.1. Providing Services
+    </h3>
+    <ul style="list-style-type:none">
+        <li>To process and manage your camping reservations</li>
+        <li>To communicate with you about your bookings</li>
+        <li>To provide customer support</li>
+    </ul>
+    <h3>
+        3.2. Improving Services
+    </h3>
+    <ul style="list-style-type:none">
+        <li>To analyze and improve our camping facilities and services</li>
+        <li>To enhance user experience on our website and app</li>
+        <li>To personalize your camping experience based on your preferences</li>
+    </ul>
+    <h3>
+        3.3. Marketing and Communication
+    </h3>
+    <ul>
+        <li>To send you promotional offers, newsletters, and updates</li>
+        <li>To respond to your inquiries and feedback</li>
+    </ul>
     </p>
     <h2>
-        Disclosure of Your Information
+        4. Disclosure of Your Information
     </h2>
     <p>
         We may share your personal information with third parties under the following circumstances:
@@ -62,7 +75,7 @@
         absolute security.
     </p>
     <h2>
-        Your Choices
+        5. Your Choices
     </h2>
     <p>
         You have the right to:
@@ -72,7 +85,7 @@
         Control cookie settings
     </p>
     <h2>
-        Third-Party Links
+        6. Third-Party Links
     </h2>
     <p>
         Our Website may contain links to third-party websites. We are not responsible for the privacy practices or
@@ -80,7 +93,7 @@
         of these third-party websites. Please review their privacy policies before using their services.
     </p>
     <h2>
-        Children's Privacy
+        7. Children's Privacy
     </h2>
     <p>
         Our Website is not intended for children under the age of 13. We do not knowingly collect or store information
@@ -88,7 +101,7 @@
         individuals under 13 years old.
     </p>
     <h2>
-        Changes to this Privacy Policy
+        8. Changes to this Privacy Policy
     </h2>
     <p>
         We may update this Privacy Policy to reflect changes in our practices or legal requirements. We will notify you
@@ -97,14 +110,18 @@
     </p>
 
     <h2>
-        Contact Us
+        9. Contact Us
     </h2>
     <p>
-        If you have questions or concerns about this Privacy Policy, please contact us at [Insert Contact Information].
-
-        By using our Website, you acknowledge that you have read and understood this Privacy Policy and agree to its
-        terms
-        and conditions.
+        If you have any questions or concerns about this Privacy Policy, please contact us at:
+    <ul style="list-style-type:none;">
+        <li>
+            Email : contact@gwsc.com
+        </li>
+    </ul>
+    Thank you for choosing " Global Wild Swimming and Camping ". We value your trust and are committed to protecting
+    your privacy
+    during your camping adventures.
     </p>
 </body>
 
