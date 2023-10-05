@@ -63,16 +63,26 @@
         4. Disclosure of Your Information
     </h2>
     <p>
-        We may share your personal information with third parties under the following circumstances:
-
-        With service providers and partners who assist us in providing the Website and services
-        With legal authorities when required by law
-        In the event of a business transfer or sale of our Website
-        With your consent
-        Security
-        We implement reasonable security measures to protect your personal information from unauthorized access or
-        disclosure. However, no method of transmission over the internet is entirely secure, and we cannot guarantee
-        absolute security.
+        We may share your personal information with third parties in the following circumstances:
+    <h3>
+        4.1. Service Providers
+    </h3>
+    <ul>
+        <li>
+            We may share your information with service providers who help us with campground management, payment
+            processing,
+            and customer support.
+        </li>
+    </ul>
+    <h3>
+        4.2. Legal Obligations
+    </h3>
+    <ul>
+        <li>
+            We may disclose your information when required by law or to protect our rights, privacy, safety, or
+            property.
+        </li>
+    </ul>
     </p>
     <h2>
         5. Your Choices

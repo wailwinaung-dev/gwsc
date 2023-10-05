@@ -31,8 +31,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         //if first time fail, add 1 and if upper, + 1
         if (isset($_SESSION['login_fail'])) {
             $_SESSION['login_fail']['count'] =  $_SESSION['login_fail']['count'] + 1;
-            if ($_SESSION['login_fail']['count'] > 4) {
-                $_SESSION['login_fail']['time'] = time() + (5 * 60);
+            if ($_SESSION['login_fail']['count'] > 2) {
+                $_SESSION['login_fail']['time'] = time() + (10 * 60);
             }
         } else {
             $_SESSION['login_fail']['count'] = 1;
