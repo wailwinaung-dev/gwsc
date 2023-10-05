@@ -46,5 +46,6 @@
     let i = window.location.href.split('.php')[0];
     let page = i.split('/');
     page = page[page.length - 1];
-    document.getElementById("location").innerText = page;
+    document.getElementById("location").innerText = page.replace("_"," ");
+    document.getElementsByTagName("title")[0].innerText=page.replace("_"," ");
 </script>
