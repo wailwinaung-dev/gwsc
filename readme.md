@@ -17,3 +17,9 @@ IF YOU WANNA RUN THROUGH ` localhost ` link ,
         and call the `localhost/gwsc`
         change the `$base` variable in `helpers/HTTP.php` to `localhost/gwsc`
 congrats you can run application with apache server.
+
+The SQL Queries are under the `database/model` folder.
+Under this folder you see many files each file contains class.
+each class contains functions.
+each function contains query to run.
+if you wanna get query for database , please copy those.
