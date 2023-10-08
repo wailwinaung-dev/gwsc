@@ -12,11 +12,9 @@ $variable = $table->getAll();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Local Attraction</title>
     <?php include(__DIR__ . '/layout/header-link.php') ?>
-    <link rel="stylesheet" href="./asset/css/common.css" />
-    <link rel="stylesheet" href="./asset/css/localAttraction.css" />
 </head>
 
-<body>
+<body id="attraction">
     <?php include(__DIR__ . '/layout/navbar.php') ?>
     <div class="hero-image">
         <div class="hero-text">

@@ -10,11 +10,9 @@ include('./helpers/FLUSH.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
     <?php include(__DIR__ . '/layout/header-link.php') ?>
-    <link rel="stylesheet" href="./asset/css/contact.css" />
-    <link rel="stylesheet" href="./asset/css/common.css" />
 </head>
 
-<body>
+<body id="contact">
     <header>
         <?php include(__DIR__ . '/layout/navbar.php') ?>
     </header>

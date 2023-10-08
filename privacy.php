@@ -8,7 +8,7 @@
     <title> GWSC - Privacy Policy </title>
 </head>
 
-<body>
+<body id="privacy">
     <h2>
         1 . Introduction
     </h2>

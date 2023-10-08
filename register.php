@@ -12,10 +12,9 @@ include("./helpers/FLUSH.php");
     <link rel='stylesheet' href='/gwsc/asset/css/login-user.css' />
     <link rel='stylesheet' href='/gwsc/asset/css/common.css' />
     <?php include(__DIR__ . '/layout/header-link.php') ?>
-    <link rel='stylesheet' href='/gwsc/asset/css/register-user.css' />
 </head>
 
-<body class="text-center">
+<body class="text-center" id="register">
     <?php include(__DIR__ . '/layout/navbar.php') ?>
     <div class="wrap">
         <div class='column-1'>
