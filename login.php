@@ -10,12 +10,10 @@ include("./helpers/FLUSH.php");
     <title>Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php include(__DIR__ . '/layout/header-link.php') ?>
-    <link rel='stylesheet' href='/gwsc/asset/css/login-user.css' />
-    <link rel='stylesheet' href='/gwsc/asset/css/common.css' />
     <script src='https://www.google.com/recaptcha/api.js' async defer></script>
 </head>
 
-<body class="text-center">
+<body class="text-center" id="login">
     <?php include(__DIR__ . '/layout/navbar.php') ?>
     <div class="wrap">
         <div class='column-1'>

@@ -16,10 +16,9 @@ $bookings = $bookingsTable->getByCustomer();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Profile</title>
     <?php include(__DIR__ . '/layout/header-link.php') ?>
-    <link rel="stylesheet" href="./asset/css/profile.css">
 </head>
 
-<body>
+<body id="profile">
     <?php include(__DIR__ . '/layout/navbar.php') ?>
     <div class="container">
         <div class="profile">

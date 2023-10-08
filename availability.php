@@ -16,11 +16,10 @@ if(isset($_POST['search-text'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pitch Types & Availability</title>
     <?php include(__DIR__ . '/layout/header-link.php') ?>
-    <link href="./asset/css/availability.css" rel="stylesheet">
 
 </head>
 
-<body>
+<body id="available">
     <?php include(__DIR__ . '/layout/navbar.php') ?>
     <div class="hero-image">
         <div class="hero-text">

@@ -13,12 +13,10 @@ $packages = $packagesTable->getAll();
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php include(__DIR__ . '/layout/header-link.php') ?>
-    <link href="./asset/css/information.css" rel="stylesheet">
-    <title>Information</title>
-
+    <title>Information Page</title>
 </head>
 
-<body>
+<body id="information">
     <?php include(__DIR__ . '/layout/navbar.php') ?>
     <div class="hero-image">
         <div class="hero-text">

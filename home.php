@@ -19,16 +19,13 @@ $features = $featuresTable->getAll();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home Page</title>
 
     <?php include(__DIR__ . '/layout/header-link.php') ?>
-    <link href="./asset/css/home.css" rel="stylesheet">
-
-    <!-- <script src="/gwsc/asset/js/home.js" defer></script> -->
 
 </head>
 
-<body>
+<body id="home">
     <?php include "./layout/navbar.php" ?>
 
     <div class="banner">

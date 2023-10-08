@@ -11,12 +11,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Features</title>
     <?php include(__DIR__ . '/layout/header-link.php') ?>
-    <link href="./asset/css/common.css" rel="stylesheet">
-    <link href="./asset/css/feature.css" rel="stylesheet">
     
 </head>
 
-<body>
+<body id="feature">
     <?php include "./layout/navbar.php" ?>
     <div class="hero-image">
         <div class='hero-text'>
