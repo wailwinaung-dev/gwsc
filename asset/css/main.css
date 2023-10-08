@@ -413,9 +413,9 @@ footer .copyright {
     vertical-align: middle;
     line-height: 1px;
     font-size: 35px;
-}
-
-#register .control {
+  }
+  
+  #register .control, #login .control {
     -moz-appearance: none;
     -webkit-appearance: none;
     -ms-appearance: none;
@@ -1365,6 +1365,75 @@ footer .copyright {
     text-align: center;
     padding: 0.75rem;
     border-bottom: 1px double #666;
+}
+
+#feature .wearable-container {
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+    background: #fff;
+}
+
+#feature .wearable-container h1 {
+    font-size: calc(1.375rem + 1.5vw);
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+#feature .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#feature .wearable-container .wear-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    padding: 1.5rem 1rem;
+    flex-wrap: wrap;
+    height: 100%;
+    background-color: #f5f5f5;
+    box-shadow: 1px 1px 5px #555;
+    margin: 10px 0;
+}
+
+#feature svg:not(:host).svg-inline--fa,
+#feature svg:not(:root).svg-inline--fa {
+    overflow: visible;
+    box-sizing: content-box;
+}
+
+#feature .fa-3x {
+    font-size: 3em;
+}
+
+#feature .fa-3x {
+    font-size: 3em;
+}
+
+#feature .svg-inline--fa {
+    display: var(--fa-display, inline-block);
+    height: 1em;
+    overflow: visible;
+    vertical-align: -0.125em;
+}
+
+#feature .text-center {
+    text-align: center !important;
+}
+
+#feature .fs-5 {
+    font-size: 1.25rem !important;
+}
+
+#feature .mb-2 {
+    margin-bottom: 0.5rem !important;
 }
 
 /**********
