@@ -1,4 +1,3 @@
-
 * {
     box-sizing: border-box;
 }
@@ -257,10 +256,10 @@ footer .copyright {
     vertical-align: middle;
     line-height: 1px;
     font-size: 35px;
-  }
-  
-  #login input[type=email],
-  #login input[type=password] {
+}
+
+#login input[type=email],
+#login input[type=password] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -268,138 +267,8 @@ footer .copyright {
     border: 1px solid #ccc;
     box-sizing: border-box;
     outline: none;
-  }
-  
-  #login button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-  }
-  
-  #login button:disabled{
-    background-color: grey;
-    cursor: not-allowed;
-  }
-  
-  #login .h3 {
-    text-align: center;
-    margin: 0;
-  }
-  
-  #login .container {
-    margin-top: 50px;
-    padding: 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #login .wrap {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-  }
-  
-  #login .column-1 {
-    max-width: 400px;
-    padding: 1.5rem;
-    border-radius: .95%;
-    display: flex;
-    align-items: center;
-    background-color: white;
-  }
-  
-  #login .main-login {
-    width: 100%;
-  }
-  
-  #login .label {
-    width: 100%;
-    display: inline-block;
-  }
-  
-  #login .column-2 {
-    width: 50%;
-  }
-  
-  #login .login-img {
-    width: 100%;
-    height: 100%;
-    background-image: url("/gwsc/asset/images/LoginPicture2.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  
-  
-  #login .banner {
-    width: 50%;
-    object-fit: cover;
-    object-position: center;
-    display: auto;
-    margin-inline: auto;
-    margin-bottom: 10px;
-    border-radius: 10%;
-  }
-  
-  @media screen and (max-width : 600px) {
-    #login .column-1 {
-      width: 100%;
-    }
-  }
-  
-  #login .alert {
-    border-radius: 6px;
-    padding: 20px;
-    margin: 10px 0;
-  }
-  
-  #login .alert-danger {
-    color: red;
-    border: 1px solid red;
-  }
-  
-  #login .alert {
-    border-radius: 6px;
-    padding: 20px;
-    margin: 10px 0;
-  }
-  
-  #login .alert-danger {
-    color: red;
-    border: 1px solid red;
-  }
-  
-  .g-recaptcha {
-    transform: scale(1.165);
-    transform-origin: 0 0;
-    display: inline-block;
-    margin: 10px 0;
-  }
-  
-  @media screen and (max-width: 400px) {
-  
-    .g-recaptcha {
-      transform: scale(0.77);
-    }
-  }
-
-/*******************
-* Register Page Styles
-*******************/
-
-
-#register .material-icons-outlined {
-    vertical-align: middle;
-    line-height: 1px;
-    font-size: 35px;
-  }
-  
-  #register .control {
+}
+#login .control {
     -moz-appearance: none;
     -webkit-appearance: none;
     -ms-appearance: none;
@@ -414,16 +283,10 @@ footer .copyright {
     text-decoration: none;
     width: 100%;
     margin-block:0.2rem;
-  }
-  
-  #register .label {
-    width: 100%;
-    margin-bottom: 0.3rem;
-    display:inline-block;
-  }
-  
-  
-  #register button {
+}
+
+
+#login button {
     background-color: #4CAF50;
     color: white;
     padding: 14px 20px;
@@ -431,84 +294,238 @@ footer .copyright {
     border: none;
     cursor: pointer;
     width: 100%;
-  }
-  
-  #register .h3 {
+}
+
+#login button:disabled {
+    background-color: grey;
+    cursor: not-allowed;
+}
+
+#login .h3 {
     text-align: center;
     margin: 0;
-  }
-  
-  #register .container {
+}
+
+#login .container {
+    margin-top: 50px;
     padding: 16px;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  #register .wrap {
-    
+}
+
+#login .wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#login .column-1 {
+    max-width: 400px;
+    padding: 1.5rem;
+    border-radius: .95%;
+    display: flex;
+    align-items: center;
+    background-color: white;
+}
+
+#login .main-login {
+    width: 100%;
+}
+
+#login .label {
+    width: 100%;
+    display: inline-block;
+}
+
+#login .column-2 {
+    width: 50%;
+}
+
+#login .login-img {
+    width: 100%;
+    height: 100%;
+    background-image: url("/gwsc/asset/images/LoginPicture2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+#login .banner {
+    width: 50%;
+    object-fit: cover;
+    object-position: center;
+    display: auto;
+    margin-inline: auto;
+    margin-bottom: 10px;
+    border-radius: 10%;
+}
+
+@media screen and (max-width : 600px) {
+    #login .column-1 {
+        width: 100%;
+    }
+}
+
+#login .alert {
+    border-radius: 6px;
+    padding: 20px;
+    margin: 10px 0;
+}
+
+#login .alert-danger {
+    color: red;
+    border: 1px solid red;
+}
+
+#login .alert {
+    border-radius: 6px;
+    padding: 20px;
+    margin: 10px 0;
+}
+
+#login .alert-danger {
+    color: red;
+    border: 1px solid red;
+}
+
+.g-recaptcha {
+    transform: scale(1.165);
+    transform-origin: 0 0;
+    display: inline-block;
+    margin: 10px 0;
+}
+
+@media screen and (max-width: 400px) {
+
+    .g-recaptcha {
+        transform: scale(0.77);
+    }
+}
+
+/*******************
+* Register Page Styles
+*******************/
+
+
+#register .material-icons-outlined {
+    vertical-align: middle;
+    line-height: 1px;
+    font-size: 35px;
+}
+
+#register .control {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    background-color: #f8f8f8;
+    border-radius: 6px;
+    border: solid 1px #e5e5e5;
+    color: inherit;
+    display: block;
+    outline: 0;
+    padding: 0.8rem;
+    text-decoration: none;
+    width: 100%;
+    margin-block: 0.2rem;
+}
+
+#register .label {
+    width: 100%;
+    margin-bottom: 0.3rem;
+    display: inline-block;
+}
+
+
+#register button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+#register .h3 {
+    text-align: center;
+    margin: 0;
+}
+
+#register .container {
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#register .wrap {
+
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
     margin-top: 70px;
     margin-bottom: 20px;
-  }
-  
-  #register .column-1 {
+}
+
+#register .column-1 {
     max-width: 400px;
-    color:#1d2634;
+    color: #1d2634;
     background-color: white;
     padding: 20px;
-  }
-  
-  #register .main-login {
+}
+
+#register .main-login {
     width: 100%;
-  }
-  
-  #register .label {
+}
+
+#register .label {
     width: 100%;
     display: inline-block;
-  }
-  
-  #register .column-2 {
+}
+
+#register .column-2 {
     width: 50%;
     overflow: hidden;
-    right:0;
-  }
-  
-  #register .login-img {
+    right: 0;
+}
+
+#register .login-img {
     width: 100%;
     height: 100%;
     background-image: url("/gwsc/asset/images/LoginPicture2.jpg");
     background-size: contain;
     background-repeat: no-repeat;
-  }
-  
-  #register .control {
+}
+
+#register .control {
     resize: none;
-  }
-  
-  #register .banner{
-    width:50%;
-    object-fit:cover;
-    object-position:center;
-    display:auto;
-    margin-inline:auto;
-    margin-bottom:10px;
-    border-radius:10%;
-  }
-  
-  
-  @media screen and (max-width : 600px) {
-    #register .column-1{
-      width:100%;
+}
+
+#register .banner {
+    width: 50%;
+    object-fit: cover;
+    object-position: center;
+    display: auto;
+    margin-inline: auto;
+    margin-bottom: 10px;
+    border-radius: 10%;
+}
+
+
+@media screen and (max-width : 600px) {
+    #register .column-1 {
+        width: 100%;
     }
-    #register .wrap{
-      width:100%;
+
+    #register .wrap {
+        width: 100%;
     }
-  
-  }
+
+}
 
 /****************
 *Home Page Styles
@@ -915,7 +932,8 @@ footer .copyright {
 /* Container for the grid */
 #information .card-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    /* Responsive grid */
     gap: 16px;
     padding: 16px;
 }
@@ -925,7 +943,8 @@ footer .copyright {
     border: 1px solid #ccc;
     border-radius: 8px;
     padding: 16px;
-    width: 100%; /* Take up the available space in the column */
+    width: 100%;
+    /* Take up the available space in the column */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     background-color: #fff;
 }
@@ -934,9 +953,9 @@ footer .copyright {
 #information .card img {
     max-width: 100%;
     height: auto;
-    display:block;
-    margin:auto;
-    margin-bottom:7.5px;
+    display: block;
+    margin: auto;
+    margin-bottom: 7.5px;
 }
 
 /* Style for the package name */
@@ -965,7 +984,8 @@ footer .copyright {
 /* Style for the location iframe */
 #information .card .location-iframe {
     width: 100%;
-    height: 200px; /* Adjust the height as needed */
+    height: 200px;
+    /* Adjust the height as needed */
     border: none;
 }
 
@@ -1107,7 +1127,7 @@ footer .copyright {
         align-items: center;
     }
 
-    #available .pitch-content{
+    #available .pitch-content {
         padding-bottom: 15px;
     }
 
@@ -1115,16 +1135,18 @@ footer .copyright {
         width: 100%;
     }
 
-    #available .search-box{
+    #available .search-box {
         flex-direction: column;
     }
-    
-    #available .search-input{
+
+    #available .search-input {
         padding-left: 0;
         padding-right: 0;
         margin-bottom: 10px;
     }
-    #available .search-input, .search-button{
+
+    #available .search-input,
+    .search-button {
         width: 100%;
     }
 }
@@ -1170,7 +1192,7 @@ footer .copyright {
     margin-bottom: 10px;
 }
 
-#review .review-rating .star{
+#review .review-rating .star {
     color: #FFD700;
     font-size: 18px;
 }
@@ -1208,7 +1230,7 @@ footer .copyright {
     background-color: #555;
 }
 
-#review .review-list{
+#review .review-list {
     border-top: 1px dotted;
 }
 
@@ -1257,7 +1279,7 @@ footer .copyright {
 
 /* Media Query for responsiveness */
 @media (max-width: 768px) {
-    #review .hero-image{
+    #review .hero-image {
         height: 40%;
 
     }
@@ -1285,23 +1307,25 @@ footer .copyright {
     color: white;
     text-shadow: 1px 1px 1px black;
 }
-#feature .container{
-    width:80%;
-    margin:auto;
-    display:block;
+
+#feature .container {
+    width: 80%;
+    margin: auto;
+    display: block;
 }
 
-#feature .grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:1rem;
+#feature .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
     padding: 1rem;
 }
 
 /* Container for the grid */
 #feature .card-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    /* Responsive grid */
     gap: 16px;
     padding: 16px;
 }
@@ -1311,7 +1335,8 @@ footer .copyright {
     border: 1px solid #ccc;
     border-radius: 8px;
     padding: 16px;
-    width: 100%; /* Take up the available space in the column */
+    width: 100%;
+    /* Take up the available space in the column */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     background-color: #fff;
     color: #04622a;
@@ -1334,11 +1359,12 @@ footer .copyright {
     font-size: 1rem;
     color: #666;
 }
-#feature .title{
-    margin:0.5rem;
-    text-align:center;
-    padding:0.75rem;
-    border-bottom:1px double #666;
+
+#feature .title {
+    margin: 0.5rem;
+    text-align: center;
+    padding: 0.75rem;
+    border-bottom: 1px double #666;
 }
 
 /**********
@@ -1380,8 +1406,9 @@ footer .copyright {
     width: 50%;
 }
 
-#contact input, #contact textarea{
-    background-color: white!important;
+#contact input,
+#contact textarea {
+    background-color: white !important;
 }
 
 
@@ -1399,23 +1426,23 @@ footer .copyright {
     padding: 0.8rem;
     text-decoration: none;
     width: 100%;
-    margin-block:0.2rem;
+    margin-block: 0.2rem;
 }
 
 #contact .label {
     width: 100%;
     margin-bottom: 0.3rem;
-    display:inline-block;
+    display: inline-block;
 }
 
 
 #contact textarea.control {
     resize: none;
-    overflow:auto;
+    overflow: auto;
 }
 
-#contact .text-center{
-    text-align:center;
+#contact .text-center {
+    text-align: center;
 }
 
 #contact button {
@@ -1432,12 +1459,12 @@ footer .copyright {
     border-radius: 6px;
     padding: 20px;
     margin: 10px 0;
-  }
-  
-  #contact .alert-success{
+}
+
+#contact .alert-success {
     color: green;
     border: 1px solid green;
-  }
+}
 
 @media screen and (max-width : 760px) {
 
@@ -1446,11 +1473,12 @@ footer .copyright {
         width: 100%;
     }
 
-    #contact .contact-container{
+    #contact .contact-container {
         /* margin: 20px 10px; */
-        width:100%;
-        padding:15px;
+        width: 100%;
+        padding: 15px;
     }
+
     #contact .name-container {
         display: block;
         gap: 0;
@@ -1483,28 +1511,32 @@ footer .copyright {
 #attraction .main-container {
     color: #666;
     /* padding-top: 70px; */
-    width:75%;
+    width: 75%;
     overflow-x: hidden;
-    margin:auto;
-    display:block;
-    margin-block:.45rem;
+    margin: auto;
+    display: block;
+    margin-block: .45rem;
 }
+
 /* Basic styling for the card */
 #attraction .card {
     border: 1px solid #ccc;
     border-radius: 8px;
     padding: 16px;
-    width: 100%; /* Take up the available space in the column */
+    width: 100%;
+    /* Take up the available space in the column */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     background-color: #fff;
-    display:flex;
-    align-items:stretch;
-    gap:1rem;
-    margin-block:.5rem;
+    display: flex;
+    align-items: stretch;
+    gap: 1rem;
+    margin-block: .5rem;
 }
 
-#attraction .card img, #attraction .card article, #attraction .card iframe{
-    width:30%;
+#attraction .card img,
+#attraction .card article,
+#attraction .card iframe {
+    width: 30%;
 }
 
 
@@ -1513,19 +1545,24 @@ footer .copyright {
 } */
 
 @media screen and (max-width:650px) {
-    #attraction .main-container{
-        width:100%;
-        padding:14px;
+    #attraction .main-container {
+        width: 100%;
+        padding: 14px;
     }
+
     #attraction .card {
         flex-direction: column;
     }
-    #attraction .card img, #attraction .card article{
-        width:100%;
+
+    #attraction .card img,
+    #attraction .card article {
+        width: 100%;
     }
+
     #attraction .card iframe {
         width: 100%;
-        height: 200px; /* Adjust the height as needed */
+        height: 200px;
+        /* Adjust the height as needed */
         border: none;
     }
 }
@@ -1654,12 +1691,12 @@ footer .copyright {
 }
 
 #package_detail .row .content-container,
-#package_detail .row .reserve-container{
+#package_detail .row .reserve-container {
     padding: 15px;
     width: 30%;
 }
 
-#package_detail .row .reserve-container{
+#package_detail .row .reserve-container {
     max-height: 350px;
     margin: 10px;
     display: flex;
@@ -1678,7 +1715,7 @@ footer .copyright {
     background-color: rgb(225, 222, 222);
 }
 
-#package_detail .booking-form h2{
+#package_detail .booking-form h2 {
     margin: 0;
 }
 
@@ -1693,7 +1730,7 @@ footer .copyright {
 }
 
 #package_detail input[type="date"],
-#package_detail input[type="number"]{
+#package_detail input[type="number"] {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -1715,7 +1752,7 @@ footer .copyright {
     background-color: #555;
 }
 
-#package_detail .result div{
+#package_detail .result div {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1726,7 +1763,7 @@ footer .copyright {
     text-align: end;
 } */
 
-#package_detail .result .total-price{
+#package_detail .result .total-price {
     font-size: 20px;
 }
 
@@ -1734,12 +1771,12 @@ footer .copyright {
     border-radius: 6px;
     padding: 20px;
     margin: 10px 0;
-  }
-  
-  #package_detail .alert-success{
+}
+
+#package_detail .alert-success {
     color: green;
     border: 1px solid green;
-  }
+}
 
 
 /* ---------- MEDIA QUERIES ---------- */
@@ -1770,7 +1807,7 @@ footer .copyright {
         padding: 15px;
     }
 
-    #package_detail .booking-form h2{
+    #package_detail .booking-form h2 {
         margin: 10px 0;
     }
 
@@ -1783,6 +1820,6 @@ footer .copyright {
     }
 }
 
-#privacy ul{
-    list-style-type:none;
+#privacy ul {
+    list-style-type: none;
 }
