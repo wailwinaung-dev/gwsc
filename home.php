@@ -125,21 +125,21 @@ $features = $featuresTable->getAll();
                 <div class="reviewer-name"><i class="fa fa-user-circle-o"></i> Mike Barber</div>
                 <div class="rating">★★★★☆</div>
                 <div class="review-text">
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, ante nec lacinia tincidunt."
+                    "Twin Campsite has many beautiful places to travel. Its a good camp place too."
                 </div>
             </div>
             <div class="reviewer-card">
                 <div class="reviewer-name"><i class="fa fa-user-circle-o"></i> John Doe</div>
                 <div class="rating">★★★★☆</div>
                 <div class="review-text">
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, ante nec lacinia tincidunt."
+                    "Bite Pu is the good campsite. With Many places to visit. "
                 </div>
             </div>
             <div class="reviewer-card">
                 <div class="reviewer-name"><i class="fa fa-user-circle-o"></i> Oppa Gamnu</div>
                 <div class="rating">★★★★☆</div>
                 <div class="review-text">
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, ante nec lacinia tincidunt."
+                    "Buttermilk park is a good park to relax. I recommand it."
                 </div>
             </div>
         </div>
